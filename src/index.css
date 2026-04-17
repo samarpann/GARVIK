@@ -77,8 +77,8 @@ html {
 
 /* Swiper classes adjustments for light theme */
 .swiper-button-next, .swiper-button-prev {
-  @apply text-primary !important;
+  color: #9d50bb !important;
 }
 .swiper-pagination-bullet-active {
-  @apply bg-primary !important;
+  background-color: #9d50bb !important;
 }
