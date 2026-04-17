@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-light: #6e48aa; /* Darker purple for light theme contrast */
+  --color-primary: #9d50bb;
+  --color-primary-dark: #2d0a4e;
+  
+  --color-dark: #ffffff; /* Swapping dark to light */
+  --color-dark-lighter: #f8f9fa;
+
+  --font-sans: "Inter", sans-serif;
+
+  --animate-fade-in: fadeIn 0.5s ease-out;
+  --animate-slide-up: slideUp 0.6s ease-out;
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes slideUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 font-sans antialiased selection:bg-primary selection:text-white;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-primary-light text-white shadow-lg shadow-primary/20 hover:shadow-primary/40;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary/10 transition-colors;
+  }
+
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-lg border border-gray-200 rounded-2xl p-6 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-primary/20;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-dark;
+  }
+}
+
+/* Custom styles for animations and premium feel */
+.hero-gradient {
+  background: radial-gradient(circle at top right, rgba(157, 80, 187, 0.1), transparent),
+              radial-gradient(circle at bottom left, rgba(110, 72, 170, 0.05), transparent);
+}
+
+.glow {
+  box-shadow: 0 0 20px rgba(110, 72, 170, 0.15);
+}
+
+/* For smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 3s ease-in-out infinite;
+}
+
+/* Swiper classes adjustments for light theme */
+.swiper-button-next, .swiper-button-prev {
+  @apply text-primary !important;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-primary !important;
+}
