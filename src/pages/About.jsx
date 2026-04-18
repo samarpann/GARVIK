@@ -170,7 +170,7 @@ const About = () => {
               className="group relative overflow-hidden rounded-3xl aspect-square shadow-lg"
             >
               <img 
-                src={`/src/assets/images/${item.img}`} 
+                src={`/images/${item.img}`} 
                 alt={item.title} 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
               />
@@ -188,7 +188,7 @@ const About = () => {
           <div className="lg:w-1/3">
             <div className="relative group">
               <div className="aspect-[3/4] rounded-[2rem] overflow-hidden bg-gray-200 shadow-2xl">
-                <img src="/src/assets/images/kamal-saini.png" alt="Kamal Saini" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
+                <img src="/images/kamal-saini.png" alt="Kamal Saini" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
               </div>
               <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-primary/10 rounded-full -z-10 blur-2xl"></div>
             </div>

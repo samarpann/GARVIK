@@ -15,27 +15,27 @@ const carouselItems = [
   {
     title: "We empower visions of Business leaders...",
     subtitle: "A 360 Integrated Marketing & Advertising Partner driving business outcomes via creative, media & influencer marketing.",
-    image: "/src/assets/images/12.jpeg",
+    image: "/images/12.jpeg",
   },
   {
     title: "Give Your Brand An Identity",
     subtitle: "A robust corporate identity, coupled with a meticulously crafted brand identity strategy, forms the cornerstone of a compelling brand image.",
-    image: "/src/assets/images/3.jpeg",
+    image: "/images/3.jpeg",
   },
   {
     title: "Performance Digital Marketing",
     subtitle: "ROI-based lead generation systems and targeted campaigns that stand out in the chaos of the internet.",
-    image: "/src/assets/images/9.jpeg",
+    image: "/images/9.jpeg",
   },
   {
     title: "Leading PR & Event Excellence",
     subtitle: "Celebrated PR/Felicitation events that strengthen relationships and enhance your professional reputation.",
-    image: "/src/assets/images/15.jpeg",
+    image: "/images/15.jpeg",
   },
   {
     title: "Integrated Brand Management",
     subtitle: "Meticulously crafted facet of your brand to resonate with your audience through strategic thinking.",
-    image: "/src/assets/images/14.jpeg",
+    image: "/images/14.jpeg",
   }
 ];
 

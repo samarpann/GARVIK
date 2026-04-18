@@ -78,7 +78,7 @@ const Philosophy = () => {
       {/* Vision & Mission */}
       <section className="bg-gray-900 py-32 mb-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="/src/assets/images/10.jpeg" alt="Philosophy background" className="w-full h-full object-cover opacity-20 scale-110 blur-sm" />
+          <img src="/images/10.jpeg" alt="Philosophy background" className="w-full h-full object-cover opacity-20 scale-110 blur-sm" />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/90 to-transparent"></div>
         </div>
         

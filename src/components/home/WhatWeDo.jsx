@@ -8,42 +8,42 @@ const services = [
     description: "Celebrating achievements and strengthening relationships through high-impact felicitation events.",
     icon: <Users className="w-6 h-6" />,
     color: "from-[#a855f7] to-[#9333ea]",
-    image: "/src/assets/images/15.jpeg"
+    image: "/images/15.jpeg"
   },
   {
     title: "Brand Promotion",
     description: "Strategically crafted brand narratives that meticulously resonate with your audience.",
     icon: <Rocket className="w-6 h-6" />,
     color: "from-[#ec4899] to-[#db2777]",
-    image: "/src/assets/images/3.jpeg"
+    image: "/images/3.jpeg"
   },
   {
     title: "Ad Films",
     description: "Compelling visuals and narratives that evoke emotions and desired consumer behaviors.",
     icon: <Video className="w-6 h-6" />,
     color: "from-[#8b5cf6] to-[#7c3aed]",
-    image: "/src/assets/images/1.jpeg"
+    image: "/images/1.jpeg"
   },
   {
     title: "Digital Marketing",
     description: "Full-stack campaigns including SEO, PPC, and ROI-based lead generation systems.",
     icon: <Smartphone className="w-6 h-6" />,
     color: "from-[#d946ef] to-[#c026d3]",
-    image: "/src/assets/images/9.jpeg"
+    image: "/images/9.jpeg"
   },
   {
     title: "Product Road Show",
     description: "Immersive demonstrations that form direct connections with potential customers and partners.",
     icon: <Globe className="w-6 h-6" />,
     color: "from-[#7e22ce] to-[#6b21a8]",
-    image: "/src/assets/images/12.jpeg"
+    image: "/images/12.jpeg"
   },
   {
     title: "Business Conference",
     description: "Bringing industry experts together to exchange knowledge and chart future success.",
     icon: <Briefcase className="w-6 h-6" />,
     color: "from-[#db2777] to-[#be185d]",
-    image: "/src/assets/images/14.jpeg"
+    image: "/images/14.jpeg"
   }
 ];
 
