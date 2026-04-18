@@ -63,9 +63,10 @@ const Footer = () => {
             <h4 className="text-gray-900 font-bold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-4">
               <li><Link to="/about" className="text-gray-600 hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link to="/philosophy" className="text-gray-600 hover:text-primary transition-colors">Philosophy</Link></li>
               <li><Link to="/services" className="text-gray-600 hover:text-primary transition-colors">Our Services</Link></li>
               <li><Link to="/portfolio" className="text-gray-600 hover:text-primary transition-colors">Portfolio</Link></li>
-              <li><Link to="/contact" className="text-gray-600 hover:text-primary transition-colors">Careers</Link></li>
+              <li><Link to="/contact" className="text-gray-600 hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -73,10 +74,10 @@ const Footer = () => {
           <div>
             <h4 className="text-gray-900 font-bold text-lg mb-6">Services</h4>
             <ul className="space-y-4">
-              <li className="text-gray-600 hover:text-primary cursor-pointer">Branding & Identity</li>
               <li className="text-gray-600 hover:text-primary cursor-pointer">Digital Marketing</li>
-              <li className="text-gray-600 hover:text-primary cursor-pointer">SEO & PPC</li>
-              <li className="text-gray-600 hover:text-primary cursor-pointer">Influencer Marketing</li>
+              <li className="text-gray-600 hover:text-primary cursor-pointer">Brand Promotion</li>
+              <li className="text-gray-600 hover:text-primary cursor-pointer">PR & Events</li>
+              <li className="text-gray-600 hover:text-primary cursor-pointer">Ad Films</li>
             </ul>
           </div>
 

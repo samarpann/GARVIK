@@ -4,7 +4,9 @@ import AgencyValues from '../components/home/AgencyValues';
 import WhatWeDo from '../components/home/WhatWeDo';
 import WhyChooseUs from '../components/home/WhyChooseUs';
 import CarouselSection from '../components/home/CarouselSection';
-import { ArrowRight } from 'lucide-react';
+import FAQSection from '../components/home/FAQSection';
+import EnquiryForm from '../components/home/EnquiryForm';
+import { ArrowRight, Trophy, Users, History, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -14,51 +16,106 @@ const Home = () => {
       <AgencyValues />
       <WhatWeDo />
       <WhyChooseUs />
-      <CarouselSection />
       
       {/* Stats Section */}
-      <section className="py-20 bg-gray-50 border-y border-gray-100">
+      <section className="py-24 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">100+</h3>
-              <p className="text-gray-500 uppercase tracking-widest text-xs font-bold">Happy Clients</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">500+</h3>
-              <p className="text-gray-500 uppercase tracking-widest text-xs font-bold">Campaigns</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">15+</h3>
-              <p className="text-gray-500 uppercase tracking-widest text-xs font-bold">Industry Awards</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">1000+</h3>
-              <p className="text-gray-500 uppercase tracking-widest text-xs font-bold">Content Pieces</p>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+            <motion.div 
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               className="text-center"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mx-auto mb-6 text-primary">
+                <Heart size={32} />
+              </div>
+              <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">99%</h3>
+              <p className="text-gray-500 uppercase tracking-widest text-[10px] font-bold">Happy Clients</p>
+            </motion.div>
+            
+            <motion.div 
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               transition={{ delay: 0.1 }}
+               className="text-center"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mx-auto mb-6 text-primary">
+                <Users size={32} />
+              </div>
+              <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">120+</h3>
+              <p className="text-gray-500 uppercase tracking-widest text-[10px] font-bold">Clients</p>
+            </motion.div>
+
+            <motion.div 
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               transition={{ delay: 0.2 }}
+               className="text-center"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mx-auto mb-6 text-primary">
+                <History size={32} />
+              </div>
+              <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">7+</h3>
+              <p className="text-gray-500 uppercase tracking-widest text-[10px] font-bold">Years Experience</p>
+            </motion.div>
+
+            <motion.div 
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               transition={{ delay: 0.3 }}
+               className="text-center"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mx-auto mb-6 text-primary">
+                <Trophy size={32} />
+              </div>
+              <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">15+</h3>
+              <p className="text-gray-500 uppercase tracking-widest text-[10px] font-bold">Awards Won</p>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-white">
+      <CarouselSection />
+      <FAQSection />
+      
+      {/* Blog/Articles Placeholder */}
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-primary-dark via-primary to-primary-light p-8 md:p-16 text-center shadow-2xl">
-            <div className="absolute inset-0 bg-white/5"></div>
-            <div className="relative z-10 max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Scale Your Business?</h2>
-              <p className="text-white/90 text-lg mb-10 font-medium">
-                Join hands with India's fastest growing advertising agency and let's create something extraordinary together.
-              </p>
-              <Link to="/contact" className="btn bg-white text-primary hover:bg-gray-100 px-10 py-4 text-lg font-bold inline-flex items-center gap-2 group shadow-xl">
-                Contact Us Now <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
-              </Link>
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4 text-gradient inline-block">Blog & Articles</h2>
+              <p className="text-gray-500 max-w-xl text-lg">Insights, trends, and success stories from the world of branding and digital marketing.</p>
             </div>
+            <Link to="/blog" className="text-primary font-bold flex items-center gap-2 hover:translate-x-2 transition-transform h-fit">
+              View All Posts <ArrowRight size={20} />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                <div className="aspect-video bg-gray-200 overflow-hidden">
+                  <img src={`https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600&sig=${i}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Blog" />
+                </div>
+                <div className="p-8">
+                  <div className="text-xs font-bold text-primary uppercase mb-4 tracking-widest">Marketing Trends</div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">How to build a brand identity that lasts for decades.</h4>
+                  <p className="text-gray-500 text-sm mb-6">Learn the secret step-by-step approach we use at Garvik India...</p>
+                  <span className="text-gray-400 text-xs font-medium">April 18, 2026</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
+      <EnquiryForm />
     </div>
   );
 };
 
 export default Home;
+import { motion } from 'framer-motion';

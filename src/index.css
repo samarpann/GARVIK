@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-light: #6e48aa; /* Darker purple for light theme contrast */
+  --color-primary-light: #bc4e9c;
   --color-primary: #9d50bb;
-  --color-primary-dark: #2d0a4e;
+  --color-primary-dark: #6e48aa;
+  --color-accent: #f80759;
   
   --color-dark: #ffffff; /* Swapping dark to light */
   --color-dark-lighter: #f8f9fa;
@@ -47,7 +48,11 @@
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-dark;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-light to-accent;
+  }
+
+  .bg-premium-gradient {
+    @apply bg-gradient-to-br from-primary-dark via-primary to-primary-light;
   }
 }
 

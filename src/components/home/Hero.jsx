@@ -15,17 +15,27 @@ const carouselItems = [
   {
     title: "We empower visions of Business leaders...",
     subtitle: "A 360 Integrated Marketing & Advertising Partner driving business outcomes via creative, media & influencer marketing.",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1200",
+    image: "/src/assets/images/12.jpeg",
   },
   {
-    title: "Elevate Your Brand Identity",
-    subtitle: "From strategy to execution, we craft unique brand stories that resonate with your audience and drive growth.",
-    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200",
+    title: "Give Your Brand An Identity",
+    subtitle: "A robust corporate identity, coupled with a meticulously crafted brand identity strategy, forms the cornerstone of a compelling brand image.",
+    image: "/src/assets/images/3.jpeg",
   },
   {
-    title: "Data-Driven Digital Growth",
-    subtitle: "Leveraging cutting-edge SEO, SEM and social strategies to put your brand ahead of the competition.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+    title: "Performance Digital Marketing",
+    subtitle: "ROI-based lead generation systems and targeted campaigns that stand out in the chaos of the internet.",
+    image: "/src/assets/images/9.jpeg",
+  },
+  {
+    title: "Leading PR & Event Excellence",
+    subtitle: "Celebrated PR/Felicitation events that strengthen relationships and enhance your professional reputation.",
+    image: "/src/assets/images/15.jpeg",
+  },
+  {
+    title: "Integrated Brand Management",
+    subtitle: "Meticulously crafted facet of your brand to resonate with your audience through strategic thinking.",
+    image: "/src/assets/images/14.jpeg",
   }
 ];
 
