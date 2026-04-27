@@ -43,7 +43,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-gray-900 mb-1">Email Us</h4>
-                    <a href="mailto:info@garvikadvertising.com" className="text-gray-600 hover:text-primary transition-colors">info@garvikadvertising.com</a>
+                    <a href="mailto:info@garvikindia.com" className="text-gray-600 hover:text-primary transition-colors">info@garvikindia.com</a>
                   </div>
                 </div>
 
@@ -53,8 +53,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-gray-900 mb-1">Our Offices</h4>
-                    <p className="text-gray-600">Delhi (India)</p>
-                    <p className="text-gray-600">B-64, Sec-65, Noida (India)</p>
+                    <p className="text-gray-600">Unit No.36, Town Central Mall,</p>
+                    <p className="text-gray-600">Greater Noida (West) - 201308</p>
                   </div>
                 </div>
               </div>
@@ -146,8 +146,8 @@ const Contact = () => {
            <div className="absolute inset-0 flex items-center justify-center">
              <div className="p-6 rounded-2xl glass-card text-center bg-white shadow-xl border-gray-100">
                <MapPin className="w-10 h-10 text-primary mx-auto mb-4" />
-               <h3 className="text-xl font-bold mb-2 text-gray-900">Visit Our Noida Office</h3>
-               <p className="text-gray-600 font-semibold">B-64, Sec-65, Noida, India</p>
+               <h3 className="text-xl font-bold mb-2 text-gray-900">Visit Our Office</h3>
+               <p className="text-gray-600 font-semibold">Unit No.36, Town Central Mall, Greater Noida (West)</p>
                <button className="mt-4 text-primary flex items-center gap-2 mx-auto font-bold hover:underline">
                  Get Directions <ArrowRight size={16} />
                </button>

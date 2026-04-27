@@ -28,19 +28,19 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Column */}
           <div className="space-y-6">
-            <Link to="/" className="text-2xl font-bold tracking-tighter text-gray-900">
-              GARVIK<span className="text-primary">INDIA</span>
+            <Link to="/" className="flex items-center space-x-2">
+              <img src="/images/site_assets/logo.png" alt="Garvik India" className="h-10 w-auto" />
             </Link>
             <p className="text-gray-600 max-w-xs leading-relaxed">
               We empower visions of Business leaders. A 360 Integrated Marketing & Advertising Partner driving business outcomes via creative, media & influencer marketing.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="p-2 bg-gray-200/50 rounded-full hover:bg-primary/10 transition-colors">
+              <a href="https://in.linkedin.com/company/garvik-media-private-limited" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-200/50 rounded-full hover:bg-primary/10 transition-colors">
                 <div className="text-gray-600 hover:text-primary">
                   <SimpleLinkedIn />
                 </div>
               </a>
-              <a href="#" className="p-2 bg-gray-200/50 rounded-full hover:bg-primary/10 transition-colors">
+              <a href="https://www.instagram.com/p/CzK7igEOUYX/" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-200/50 rounded-full hover:bg-primary/10 transition-colors">
                 <div className="text-gray-600 hover:text-primary">
                   <SimpleInstagram />
                 </div>
@@ -50,7 +50,7 @@ const Footer = () => {
                   <SimpleTwitter />
                 </div>
               </a>
-              <a href="#" className="p-2 bg-gray-200/50 rounded-full hover:bg-primary/10 transition-colors">
+              <a href="https://www.facebook.com/GarvikMedia123/" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-200/50 rounded-full hover:bg-primary/10 transition-colors">
                 <div className="text-gray-600 hover:text-primary">
                   <SimpleFacebook />
                 </div>
@@ -86,11 +86,15 @@ const Footer = () => {
             <h4 className="text-gray-900 font-bold text-lg mb-6">Contact Us</h4>
             <div className="flex items-start space-x-3 text-gray-600">
               <MapPin size={24} className="text-primary flex-shrink-0" />
-              <span>B-64, Sec-65, Noida (India)</span>
+              <span>Unit No.36, Town Central Mall, Greater Noida (West) - 201308</span>
+            </div>
+            <div className="flex items-center space-x-3 text-gray-600">
+              <Phone size={20} className="text-primary" />
+              <a href="tel:+918448362999" className="hover:text-primary transition-colors font-medium">+91- 8448362999</a>
             </div>
             <div className="flex items-center space-x-3 text-gray-600">
               <Mail size={20} className="text-primary" />
-              <a href="mailto:info@garvikadvertising.com" className="hover:text-primary transition-colors font-medium">info@garvikadvertising.com</a>
+              <a href="mailto:info@garvikindia.com" className="hover:text-primary transition-colors font-medium">info@garvikindia.com</a>
             </div>
           </div>
         </div>

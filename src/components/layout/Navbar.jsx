@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -20,7 +21,21 @@ const Navbar = () => {
     { title: 'Home', path: '/' },
     { title: 'About', path: '/about' },
     { title: 'Philosophy', path: '/philosophy' },
-    { title: 'Services', path: '/services' },
+    { 
+      title: 'Services', 
+      path: '/services',
+      dropdown: [
+        { title: 'Integrated Brand Mgmt', path: '/integrated-brand-mgmt' },
+        { title: 'Broadcast Advertising', path: '/broadcast-advertising' },
+        { title: 'Print Media', path: '/print-media' },
+        { title: 'Ad Films', path: '/ad-films' },
+        { title: 'PR /Felicitation Events', path: '/pr-events' },
+        { title: 'Business Conferences', path: '/business-conferences' },
+        { title: 'Product Road Show', path: '/product-road-show' },
+        { title: 'Digital Marketing', path: '/digital-marketing' },
+        { title: 'Creative Design & Content', path: '/creative-design-content' },
+      ]
+    },
     { title: 'Portfolio', path: '/portfolio' },
     { title: 'Contact', path: '/contact' },
   ];
@@ -30,23 +45,53 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            <span className={`text-2xl font-bold tracking-tighter ${scrolled ? 'text-gray-900' : 'text-gray-900'}`}>
-              GARVIK<span className="text-primary">INDIA</span>
-            </span>
+            <img src="/images/site_assets/logo.png" alt="Garvik India" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname === link.path ? 'text-primary font-semibold' : 'text-gray-600'}`}
+              <div 
+                key={link.title} 
+                className="relative group"
+                onMouseEnter={() => link.dropdown && setServicesOpen(true)}
+                onMouseLeave={() => link.dropdown && setServicesOpen(false)}
               >
-                {link.title}
-              </Link>
+                <div className="flex items-center gap-1 cursor-pointer">
+                  <Link
+                    to={link.path}
+                    className={`text-sm font-bold transition-colors hover:text-primary ${location.pathname === link.path ? 'text-primary font-bold' : 'text-gray-900'}`}
+                  >
+                    {link.title}
+                  </Link>
+                  {link.dropdown && <ChevronDown size={14} className={`transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />}
+                </div>
+
+                {link.dropdown && (
+                  <AnimatePresence>
+                    {servicesOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute left-0 mt-2 w-64 bg-white shadow-2xl rounded-xl py-4 border border-gray-100 z-[60]"
+                      >
+                        {link.dropdown.map((sub) => (
+                          <Link
+                            key={sub.title}
+                            to={sub.path}
+                            className="block px-6 py-2.5 text-sm font-bold text-gray-900 hover:bg-gray-50 hover:text-primary transition-colors"
+                          >
+                            {sub.title}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                )}
+              </div>
             ))}
-            <Link to="/contact" className="btn btn-primary px-5 py-2 text-sm">
+            <Link to="/contact" className="btn btn-primary px-5 py-2 text-sm font-bold">
               Get Started
             </Link>
           </div>
@@ -72,16 +117,31 @@ const Navbar = () => {
           >
             <div className="flex flex-col p-4 space-y-4">
               {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`text-lg font-medium ${location.pathname === link.path ? 'text-primary' : 'text-gray-600'}`}
-                >
-                  {link.title}
-                </Link>
+                <div key={link.title}>
+                  <Link
+                    to={link.path}
+                    onClick={() => setIsOpen(false)}
+                    className={`text-lg font-bold flex items-center justify-between ${location.pathname === link.path ? 'text-primary' : 'text-gray-900'}`}
+                  >
+                    {link.title}
+                  </Link>
+                  {link.dropdown && (
+                    <div className="pl-4 mt-2 space-y-2 border-l-2 border-gray-100">
+                      {link.dropdown.map((sub) => (
+                        <Link
+                          key={sub.title}
+                          to={sub.path}
+                          onClick={() => setIsOpen(false)}
+                          className="block text-sm font-bold text-gray-600 hover:text-primary transition-colors"
+                        >
+                          {sub.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
-              <Link to="/contact" onClick={() => setIsOpen(false)} className="btn btn-primary text-center">
+              <Link to="/contact" onClick={() => setIsOpen(false)} className="btn btn-primary text-center font-bold">
                 Get Started
               </Link>
             </div>

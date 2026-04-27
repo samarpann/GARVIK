@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Trophy, Globe, Rocket, Users2 } from 'lucide-react';
+import ClientsSection from '../components/home/ClientsSection';
 
 const programs = [
   {
@@ -79,10 +80,10 @@ const Portfolio = () => {
             </div>
             <div className="lg:w-1/2 grid grid-cols-2 gap-4">
               <div className="aspect-square rounded-2xl bg-white border border-gray-100 overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover" alt="Portfolio 1" />
+                <img src="/images/site_assets/service_brand_mgmt.webp" className="w-full h-full object-cover" alt="Portfolio 1" />
               </div>
               <div className="aspect-square rounded-2xl bg-white border border-gray-100 overflow-hidden translate-y-8 shadow-lg">
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover" alt="Portfolio 2" />
+                <img src="/images/site_assets/service_broadcast.webp" className="w-full h-full object-cover" alt="Portfolio 2" />
               </div>
             </div>
           </div>
@@ -103,7 +104,7 @@ const Portfolio = () => {
             className="group relative rounded-3xl overflow-hidden aspect-video shadow-lg"
           >
             <img 
-               src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800" 
+               src="/images/site_assets/service_pr_events.webp" 
                alt="Coffee Table Book Launch" 
                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
             />
@@ -122,7 +123,7 @@ const Portfolio = () => {
             className="group relative rounded-3xl overflow-hidden aspect-video shadow-lg"
           >
             <img 
-               src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&q=80&w=800" 
+               src="/images/site_assets/service_business_conf.webp" 
                alt="Industry Events" 
                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
             />
@@ -137,6 +138,8 @@ const Portfolio = () => {
           </motion.div>
         </div>
       </section>
+
+      <ClientsSection />
     </div>
   );
 };

@@ -4,46 +4,67 @@ import { Palette, Megaphone, Smartphone, Video, Users, Briefcase, Rocket, Globe 
 
 const services = [
   {
-    title: "PR & Event Management",
-    description: "Celebrating achievements and strengthening relationships through high-impact felicitation events.",
-    icon: <Users className="w-6 h-6" />,
+    title: "Integrated Brand Mgmt",
+    description: "Craft a compelling brand narrative, align your messaging, and boost recognition.",
+    icon: <Briefcase className="w-6 h-6" />,
     color: "from-[#a855f7] to-[#9333ea]",
-    image: "/images/15.jpeg"
+    image: "/images/site_assets/service_brand_mgmt.webp"
   },
   {
-    title: "Brand Promotion",
-    description: "Strategically crafted brand narratives that meticulously resonate with your audience.",
-    icon: <Rocket className="w-6 h-6" />,
+    title: "Broadcast Advertising",
+    description: "A dynamic and influential medium through which companies convey messages to a wide audience.",
+    icon: <Megaphone className="w-6 h-6" />,
     color: "from-[#ec4899] to-[#db2777]",
-    image: "/images/3.jpeg"
+    image: "/images/site_assets/service_broadcast.webp"
   },
   {
-    title: "Ad Films",
-    description: "Compelling visuals and narratives that evoke emotions and desired consumer behaviors.",
-    icon: <Video className="w-6 h-6" />,
+    title: "Print Media",
+    description: "Print designs leave an indelible mark, conveying your message effectively.",
+    icon: <Palette className="w-6 h-6" />,
     color: "from-[#8b5cf6] to-[#7c3aed]",
-    image: "/images/1.jpeg"
+    image: "/images/site_assets/service_print_media.webp"
   },
   {
-    title: "Digital Marketing",
-    description: "Full-stack campaigns including SEO, PPC, and ROI-based lead generation systems.",
-    icon: <Smartphone className="w-6 h-6" />,
+    title: "Ad Film",
+    description: "Storytelling tools, combining visuals to convey messages.",
+    icon: <Video className="w-6 h-6" />,
     color: "from-[#d946ef] to-[#c026d3]",
-    image: "/images/9.jpeg"
+    image: "/images/site_assets/service_ad_film.webp"
+  },
+  {
+    title: "PR Events",
+    description: "Meticulously planned gatherings aimed at enhancing an organization’s reputation.",
+    icon: <Users className="w-6 h-6" />,
+    color: "from-[#7e22ce] to-[#6b21a8]",
+    image: "/images/site_assets/service_pr_events.webp"
+  },
+  {
+    title: "Business Conferences",
+    description: "Knowledge-sharing platforms where industry experts convene to discuss trends.",
+    icon: <Briefcase className="w-6 h-6" />,
+    color: "from-[#db2777] to-[#be185d]",
+    image: "/images/site_assets/service_business_conf.webp"
   },
   {
     title: "Product Road Show",
-    description: "Immersive demonstrations that form direct connections with potential customers and partners.",
+    description: "Dynamic marketing events that showcase products directly to potential customers.",
     icon: <Globe className="w-6 h-6" />,
-    color: "from-[#7e22ce] to-[#6b21a8]",
-    image: "/images/12.jpeg"
+    color: "from-[#a855f7] to-[#9333ea]",
+    image: "/images/site_assets/service_product_roadshow.webp"
   },
   {
-    title: "Business Conference",
-    description: "Bringing industry experts together to exchange knowledge and chart future success.",
-    icon: <Briefcase className="w-6 h-6" />,
-    color: "from-[#db2777] to-[#be185d]",
-    image: "/images/14.jpeg"
+    title: "Digital Marketing",
+    description: "Cornerstone of modern business success with data-driven strategies.",
+    icon: <Smartphone className="w-6 h-6" />,
+    color: "from-[#ec4899] to-[#db2777]",
+    image: "/images/site_assets/service_digital_marketing.webp"
+  },
+  {
+    title: "Creative Design & Content",
+    description: "Expert photographers capturing moments, emotions, and memories.",
+    icon: <Palette className="w-6 h-6" />,
+    color: "from-[#8b5cf6] to-[#7c3aed]",
+    image: "/images/site_assets/service_creative_design.webp"
   }
 ];
 

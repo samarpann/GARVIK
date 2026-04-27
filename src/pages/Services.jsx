@@ -10,63 +10,63 @@ const detailedServices = [
     description: "In the digital age, print remains a powerful medium. We offer business cards, brochures, and posters that exude excellence using cutting-edge technology and eco-friendly practices.",
     icon: <Printer className="w-8 h-8" />,
     color: "from-purple-500 to-purple-600",
-    image: "/images/17.jpeg"
+    image: "/images/site_assets/service_print_media.webp"
   },
   {
     title: "Ads Films",
     description: "Evoking the right emotions to validate marketer's claims. We maintain product-centric creativity where the product remains the hero.",
     icon: <Video className="w-8 h-8" />,
     color: "from-pink-500 to-pink-600",
-    image: "/images/1.jpeg" // Professional setting
+    image: "/images/site_assets/service_ad_film.webp" // Professional setting
   },
   {
     title: "PR / Felicitation Events",
     description: "Celebratory platforms to acknowledge accomplishments, strengthen relationships, and promote brand visibility through memorable experiences.",
     icon: <Users className="w-8 h-8" />,
     color: "from-indigo-500 to-indigo-600",
-    image: "/images/15.jpeg" // Event stage
+    image: "/images/site_assets/service_pr_events.webp" // Event stage
   },
   {
     title: "Business Conferences",
     description: "Catalysts for innovation and networking, bringing together experts to exchange insights and chart courses for future success.",
     icon: <Briefcase className="w-8 h-8" />,
     color: "from-blue-500 to-blue-600",
-    image: "/images/14.jpeg" // Corporate networking
+    image: "/images/site_assets/service_business_conf.webp" // Corporate networking
   },
   {
     title: "Product Road Show",
     description: "Immersive reveals that go beyond traditional marketing, allowing real-time interaction and direct engagement with potential customers.",
     icon: <Rocket className="w-8 h-8" />,
     color: "from-orange-500 to-orange-600",
-    image: "/images/12.jpeg" // Stage interaction
+    image: "/images/site_assets/service_product_roadshow.webp" // Stage interaction
   },
   {
     title: "Digital Marketing",
     description: "Powering the digital age through SEO, PPC, social media marketing, and ROI-based lead generation systems.",
     icon: <Globe className="w-8 h-8" />,
     color: "from-cyan-500 to-cyan-600",
-    image: "/images/9.jpeg" // Dynamic vibe
+    image: "/images/site_assets/service_digital_marketing.webp" // Dynamic vibe
   },
   {
     title: "Creative Design & Content",
     description: "The twin engines of engagement. We craft visual identities and narratives that transcend language barriers and resonate deeply.",
     icon: <Palette className="w-8 h-8" />,
     color: "from-red-500 to-red-600",
-    image: "/images/7.jpeg" // Creative vibe
+    image: "/images/site_assets/service_creative_design.webp" // Creative vibe
   },
   {
     title: "Integrated Brand Management",
     description: "A meticulously crafted ecosystem of perceptions. We ensure every touchpoint communicates a cohesive, compelling brand image.",
     icon: <Gem className="w-8 h-8" />,
     color: "from-emerald-500 to-emerald-600",
-    image: "/images/3.jpeg" // Interaction
+    image: "/images/site_assets/service_brand_mgmt.webp" // Interaction
   },
   {
     title: "Broadcasting Advertising",
     description: "Leveraging the unparalleled reach of TV and Radio to tap into millions of households with targeted, high-impact messaging.",
     icon: <Megaphone className="w-8 h-8" />,
     color: "from-teal-500 to-teal-600",
-    image: "/images/2.jpeg" // Traditional/Grand feel
+    image: "/images/site_assets/service_broadcast.webp" // Traditional/Grand feel
   },
   {
     title: "Celebrity Endorsement",

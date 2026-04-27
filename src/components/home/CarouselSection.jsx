@@ -3,29 +3,29 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 const projects = [
   {
-    title: "Branding",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=600",
-    category: "Identity Design"
+    title: "Brand Management",
+    image: "/images/site_assets/service_brand_mgmt.webp",
+    category: "Strategy"
+  },
+  {
+    title: "Broadcast Advertising",
+    image: "/images/site_assets/service_broadcast.webp",
+    category: "Media"
+  },
+  {
+    title: "Ad Film Production",
+    image: "/images/site_assets/service_ad_film.webp",
+    category: "Production"
+  },
+  {
+    title: "PR & Event Management",
+    image: "/images/site_assets/service_pr_events.webp",
+    category: "Events"
   },
   {
     title: "Digital Marketing",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
-    category: "Strategy & Execution"
-  },
-  {
-    title: "Social Media",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=600",
-    category: "Growth & Engagement"
-  },
-  {
-    title: "SEO",
-    image: "https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?auto=format&fit=crop&q=80&w=600",
-    category: "Search Visibility"
-  },
-  {
-    title: "Advertising",
-    image: "https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&q=80&w=600",
-    category: "Campaign Management"
+    image: "/images/site_assets/service_digital_marketing.webp",
+    category: "Digital"
   }
 ];
 

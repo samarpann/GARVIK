@@ -6,6 +6,7 @@ import WhyChooseUs from '../components/home/WhyChooseUs';
 import CarouselSection from '../components/home/CarouselSection';
 import FAQSection from '../components/home/FAQSection';
 import EnquiryForm from '../components/home/EnquiryForm';
+import ClientsSection from '../components/home/ClientsSection';
 import { ArrowRight, Trophy, Users, History, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -30,8 +31,8 @@ const Home = () => {
               <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mx-auto mb-6 text-primary">
                 <Heart size={32} />
               </div>
-              <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">99%</h3>
-              <p className="text-gray-500 uppercase tracking-widest text-[10px] font-bold">Happy Clients</p>
+              <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">50+</h3>
+              <p className="text-gray-500 uppercase tracking-widest text-[10px] font-bold">Projects Done</p>
             </motion.div>
             
             <motion.div 
@@ -44,8 +45,8 @@ const Home = () => {
               <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mx-auto mb-6 text-primary">
                 <Users size={32} />
               </div>
-              <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">120+</h3>
-              <p className="text-gray-500 uppercase tracking-widest text-[10px] font-bold">Clients</p>
+              <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">20+</h3>
+              <p className="text-gray-500 uppercase tracking-widest text-[10px] font-bold">Brands Served</p>
             </motion.div>
 
             <motion.div 
@@ -80,6 +81,7 @@ const Home = () => {
       </section>
 
       <CarouselSection />
+      <ClientsSection />
       <FAQSection />
       
       {/* Blog/Articles Placeholder */}

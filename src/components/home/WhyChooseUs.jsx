@@ -1,19 +1,37 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, HeartPulse, Sparkles, TrendingUp } from 'lucide-react';
+import { ShieldCheck, HeartPulse, Sparkles, TrendingUp, Users } from 'lucide-react';
 
 const sections = [
   {
-    title: "Building Brands from Scratch",
-    description: "Many first-gen entrepreneurs arrive at Garvik India with nothing more than a concept or a dream. What they leave with is a complete brand identity, a compelling launch strategy, and the support system to turn that vision into a business engine.",
+    title: "Content Management",
+    description: "Expertly crafting and organizing content that resonates with your audience and drives engagement across all platforms.",
     icon: <Sparkles className="w-6 h-6 text-primary" />,
-    extra: "Whether it is a first-time entrepreneur launching a new FMCG product, or a boutique fashion label wanting to become a household name — Garvik India’s step-by-step approach has helped hundreds of ventures find their voice."
+    extra: "From storytelling to technical writing, we ensure your message is clear, compelling, and consistent."
   },
   {
-    title: "True Partnership, Not Transactional Work",
-    description: "What differentiates Garvik India is its relationship-driven approach. Clients are not treated as 'projects' but seen as part of an expanding family of dreamers.",
+    title: "Brand Management",
+    description: "Developing and maintaining a strong brand identity that stands out in a crowded marketplace.",
+    icon: <ShieldCheck className="w-6 h-6 text-primary" />,
+    extra: "We focus on long-term strategy and positioning to build trust and recognition for your brand."
+  },
+  {
+    title: "Experienced Team",
+    description: "A group of seasoned professionals dedicated to delivering creative and effective marketing solutions.",
+    icon: <Users className="w-6 h-6 text-primary" />,
+    extra: "Our team brings years of industry expertise to every project, ensuring top-tier results."
+  },
+  {
+    title: "Quick Delivery",
+    description: "Streamlined processes and efficient workflows to deliver high-quality results on time, every time.",
+    icon: <TrendingUp className="w-6 h-6 text-primary" />,
+    extra: "We understand the importance of speed in today's fast-paced business environment."
+  },
+  {
+    title: "Affordable Pricing",
+    description: "High-end marketing services accessible to businesses of all sizes without compromising on quality.",
     icon: <HeartPulse className="w-6 h-6 text-primary" />,
-    extra: "The team often meets founders personally, understands their struggles, brainstorms solutions, and even advises less expensive options if it benefits the client’s long-term sustainability."
+    extra: "We offer competitive rates and customized packages tailored to your specific budget and needs."
   }
 ];
 
@@ -36,7 +54,7 @@ const WhyChooseUs = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {sections.map((section, index) => (
             <motion.div
               key={index}

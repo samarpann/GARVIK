@@ -11,6 +11,15 @@ const Services = lazy(() => import('./pages/Services'));
 const Philosophy = lazy(() => import('./pages/Philosophy'));
 const Portfolio = lazy(() => import('./pages/Portfolio'));
 const Contact = lazy(() => import('./pages/Contact'));
+const IntegratedBrandMgmt = lazy(() => import('./pages/services/IntegratedBrandMgmt'));
+const BroadcastAdvertising = lazy(() => import('./pages/services/BroadcastAdvertising'));
+const PrintMedia = lazy(() => import('./pages/services/PrintMedia'));
+const AdFilms = lazy(() => import('./pages/services/AdFilms'));
+const PREvents = lazy(() => import('./pages/services/PREvents'));
+const Conferences = lazy(() => import('./pages/services/Conferences'));
+const RoadShow = lazy(() => import('./pages/services/RoadShow'));
+const DigitalMarketing = lazy(() => import('./pages/services/DigitalMarketing'));
+const CreativeDesign = lazy(() => import('./pages/services/CreativeDesign'));
 
 function App() {
   return (
@@ -31,6 +40,15 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/integrated-brand-mgmt" element={<IntegratedBrandMgmt />} />
+              <Route path="/broadcast-advertising" element={<BroadcastAdvertising />} />
+              <Route path="/print-media" element={<PrintMedia />} />
+              <Route path="/ad-films" element={<AdFilms />} />
+              <Route path="/pr-events" element={<PREvents />} />
+              <Route path="/business-conferences" element={<Conferences />} />
+              <Route path="/product-road-show" element={<RoadShow />} />
+              <Route path="/digital-marketing" element={<DigitalMarketing />} />
+              <Route path="/creative-design-content" element={<CreativeDesign />} />
             </Routes>
           </Suspense>
         </main>

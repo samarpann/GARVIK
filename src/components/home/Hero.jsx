@@ -13,29 +13,24 @@ import 'swiper/css/navigation';
 
 const carouselItems = [
   {
-    title: "We empower visions of Business leaders...",
-    subtitle: "A 360 Integrated Marketing & Advertising Partner driving business outcomes via creative, media & influencer marketing.",
-    image: "/images/12.jpeg",
+    title: "Business Conference",
+    subtitle: "Crafting Dreams, One Frame at a Time",
+    image: "/images/site_assets/hero_business_conf.webp",
   },
   {
-    title: "Give Your Brand An Identity",
-    subtitle: "A robust corporate identity, coupled with a meticulously crafted brand identity strategy, forms the cornerstone of a compelling brand image.",
-    image: "/images/3.jpeg",
+    title: "Product Road Show",
+    subtitle: "Capturing Culture, Sharing Stories.",
+    image: "/images/site_assets/hero_product_roadshow.webp",
   },
   {
-    title: "Performance Digital Marketing",
-    subtitle: "ROI-based lead generation systems and targeted campaigns that stand out in the chaos of the internet.",
-    image: "/images/9.jpeg",
+    title: "Digital Marketing",
+    subtitle: "Where Strategy Meets Clicks",
+    image: "/images/site_assets/hero_digital_marketing.webp",
   },
   {
-    title: "Leading PR & Event Excellence",
-    subtitle: "Celebrated PR/Felicitation events that strengthen relationships and enhance your professional reputation.",
-    image: "/images/15.jpeg",
-  },
-  {
-    title: "Integrated Brand Management",
-    subtitle: "Meticulously crafted facet of your brand to resonate with your audience through strategic thinking.",
-    image: "/images/14.jpeg",
+    title: "Corporate Video Ads Production",
+    subtitle: "Crafting Visual Brilliance, Shaping Your Story.",
+    image: "/images/site_assets/hero_video_ads.webp",
   }
 ];
 

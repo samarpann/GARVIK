@@ -4,20 +4,28 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
   {
-    question: "What industries does Garvik India specialize in?",
-    answer: "We cover a diverse range of sectors including Retail & FMCG, Healthcare, Real Estate, Education, Manufacturing, and Hospitality. Our 360° approach allows us to adapt to any industry's unique needs."
+    question: "What are animation videos? How can they help me?",
+    answer: "Animation videos are computer-generated 2D or 3D motion-graphic videos that help deliver brand essence and product descriptions."
   },
   {
-    question: "How long does it take to see results from digital marketing?",
-    answer: "While some results like social engagement can be immediate, SEO and organic growth typically take 3-6 months. Our ROI-based performance marketing aims for faster conversions through targeted campaigns."
+    question: "What content should I post on social media?",
+    answer: "Content should be relevant to your audience, including product updates, educational content, and customer testimonials."
   },
   {
-    question: "Do you offer customized packages for startups?",
-    answer: "Absolutely. We pride ourselves on being a growth partner for entrepreneurs. We offer tiered services and even advise on cost-effective options to ensure long-term sustainability for new ventures."
+    question: "Is Print Media still relevant in the digital age?",
+    answer: "Yes, Print Media is effective for reaching specific demographics and complements digital marketing efforts."
   },
   {
-    question: "What makes Garvik India different from other agencies?",
-    answer: "Our relationship-driven approach. We don't just execute projects; we become part of your launch team. Our founder-led mentorship and integrated model (creative, digital, PR, BTL) provide a power-packed growth engine under one roof."
+    question: "How long does it take to complete an animated video?",
+    answer: "Typically between 4 and 6 weeks, depending on project complexity."
+  },
+  {
+    question: "Why is Brand Management important for businesses?",
+    answer: "It leads to increased brand recognition, customer loyalty, and competitive advantage."
+  },
+  {
+    question: "What are some key Digital Marketing strategies?",
+    answer: "Strategies include SEO, SEM, content marketing, email marketing, and social media marketing."
   }
 ];
 

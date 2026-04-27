@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Eye, Gem, Award, CheckCircle2, Mic, Printer, Video, Globe, Palette, Megaphone, Users, Briefcase, Star } from 'lucide-react';
+import { Target, Eye, Gem, Award, CheckCircle2, Mic, Printer, Video, Globe, Palette, Megaphone, Users, Briefcase, Star, Rocket } from 'lucide-react';
 
 const detailedServices = [
   {
@@ -78,7 +78,7 @@ const Philosophy = () => {
       {/* Vision & Mission */}
       <section className="bg-gray-900 py-32 mb-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="/images/10.jpeg" alt="Philosophy background" className="w-full h-full object-cover opacity-20 scale-110 blur-sm" />
+          <img src="/images/site_assets/hero_business_conf.webp" alt="Philosophy background" className="w-full h-full object-cover opacity-20 scale-110 blur-sm" />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/90 to-transparent"></div>
         </div>
         
@@ -177,4 +177,3 @@ const Philosophy = () => {
 };
 
 export default Philosophy;
-import { Rocket } from 'lucide-react';
