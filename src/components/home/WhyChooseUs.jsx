@@ -1,45 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, HeartPulse, Sparkles, TrendingUp, Users } from 'lucide-react';
-
-const sections = [
-  {
-    title: "Content Management",
-    description: "Expertly crafting and organizing content that resonates with your audience and drives engagement across all platforms.",
-    icon: <Sparkles className="w-6 h-6 text-primary" />,
-    extra: "From storytelling to technical writing, we ensure your message is clear, compelling, and consistent."
-  },
-  {
-    title: "Brand Management",
-    description: "Developing and maintaining a strong brand identity that stands out in a crowded marketplace.",
-    icon: <ShieldCheck className="w-6 h-6 text-primary" />,
-    extra: "We focus on long-term strategy and positioning to build trust and recognition for your brand."
-  },
-  {
-    title: "Experienced Team",
-    description: "A group of seasoned professionals dedicated to delivering creative and effective marketing solutions.",
-    icon: <Users className="w-6 h-6 text-primary" />,
-    extra: "Our team brings years of industry expertise to every project, ensuring top-tier results."
-  },
-  {
-    title: "Quick Delivery",
-    description: "Streamlined processes and efficient workflows to deliver high-quality results on time, every time.",
-    icon: <TrendingUp className="w-6 h-6 text-primary" />,
-    extra: "We understand the importance of speed in today's fast-paced business environment."
-  },
-  {
-    title: "Affordable Pricing",
-    description: "High-end marketing services accessible to businesses of all sizes without compromising on quality.",
-    icon: <HeartPulse className="w-6 h-6 text-primary" />,
-    extra: "We offer competitive rates and customized packages tailored to your specific budget and needs."
-  }
-];
+import { ShieldCheck, Target, HeartHandshake } from 'lucide-react';
 
 const WhyChooseUs = () => {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-16 mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -48,41 +15,70 @@ const WhyChooseUs = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
               Why <span className="text-gradient">Garvik India</span>
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
               We become part of the launch team of every entrepreneur we support. Our honesty, empathy, and mentorship make us a trusted incubator of entrepreneurial confidence.
             </p>
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {sections.map((section, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              className="group p-10 rounded-3xl bg-gray-50 hover:bg-white border border-gray-100 hover:border-primary/20 hover:shadow-2xl transition-all duration-500"
-            >
-              <div className="mb-6 p-4 rounded-2xl bg-white shadow-sm inline-block group-hover:scale-110 transition-transform">
-                {section.icon}
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{section.title}</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed font-medium">
-                {section.description}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Section 1 */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="p-10 rounded-[2.5rem] bg-gray-50 border border-gray-100 shadow-lg hover:shadow-2xl hover:border-primary/20 transition-all duration-500 relative group overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10 group-hover:scale-150 transition-transform duration-700"></div>
+            <div className="mb-8 p-4 rounded-2xl bg-white shadow-sm inline-block text-primary">
+              <Target className="w-8 h-8" />
+            </div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-6">Building Brands from Scratch</h3>
+            <div className="space-y-4 text-gray-600 leading-relaxed font-medium">
+              <p>
+                Whether it is a first-time entrepreneur launching a new FMCG product, a tech founder looking to attract investors, or a boutique fashion label wanting to become a household name — Garvik India's step-by-step approach has helped hundreds of ventures find their voice.
               </p>
-              <p className="text-gray-500 text-sm leading-relaxed border-t border-gray-200 pt-6">
-                {section.extra}
+              <p>
+                Many first-gen entrepreneurs arrive at Garvik India with nothing more than a concept or a dream. What they leave with is a complete brand identity, a compelling launch strategy, and the support system to turn that vision into a business engine.
               </p>
-            </motion.div>
-          ))}
+              <p>
+                From helping develop the company's name and logo, choosing colours and fonts that reflect the ethos, crafting taglines that resonate emotionally, and conceptualising launch campaigns that spark conversations — Garvik India becomes part of the launch team of every entrepreneur it supports. The result? Businesses don't just start — they make an impact.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Section 2 */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="p-10 rounded-[2.5rem] bg-gray-50 border border-gray-100 shadow-lg hover:shadow-2xl hover:border-primary/20 transition-all duration-500 relative group overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-bl-full -z-10 group-hover:scale-150 transition-transform duration-700"></div>
+            <div className="mb-8 p-4 rounded-2xl bg-white shadow-sm inline-block text-accent">
+              <HeartHandshake className="w-8 h-8" />
+            </div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-6">True Partnership, Not Transactional Work</h3>
+            <div className="space-y-4 text-gray-600 leading-relaxed font-medium">
+              <p>
+                What differentiates Garvik India in a competitive marketplace is its relationship-driven approach. Here, clients are not treated as "projects" but seen as part of an expanding family of dreamers.
+              </p>
+              <p>
+                The team often meets founders personally, understands their struggles and motivations, brainstorms solutions, guides them on what to avoid—sometimes even advising less expensive options if it benefits the client's long-term sustainability.
+              </p>
+              <p>
+                That kind of honesty, empathy and mentorship has made Garvik India not only a successful business — but also a trusted incubator of entrepreneurial confidence.
+              </p>
+            </div>
+          </motion.div>
         </div>
 
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="mt-20 p-10 rounded-[2.5rem] bg-gradient-to-br from-primary via-primary-light to-primary-dark text-white relative overflow-hidden text-center shadow-2xl"
+          className="mt-20 p-10 rounded-[2.5rem] bg-gradient-to-br from-primary via-primary-light to-accent text-white relative overflow-hidden text-center shadow-2xl"
         >
           <div className="relative z-10 max-w-2xl mx-auto">
             <ShieldCheck className="w-12 h-12 mb-6 mx-auto opacity-80" />
@@ -93,7 +89,8 @@ const WhyChooseUs = () => {
               Creating a legacy of trust and entrepreneurial success since 2017.
             </p>
           </div>
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -ml-32 -mb-32"></div>
         </motion.div>
       </div>
     </section>

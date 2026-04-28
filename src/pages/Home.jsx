@@ -5,8 +5,11 @@ import WhatWeDo from '../components/home/WhatWeDo';
 import WhyChooseUs from '../components/home/WhyChooseUs';
 import CarouselSection from '../components/home/CarouselSection';
 import FAQSection from '../components/home/FAQSection';
+import BrandIdentityBanner from '../components/home/BrandIdentityBanner';
+import WorkProcess from '../components/home/WorkProcess';
 import EnquiryForm from '../components/home/EnquiryForm';
 import ClientsSection from '../components/home/ClientsSection';
+import AboutUsSmall from '../components/home/AboutUsSmall';
 import { ArrowRight, Trophy, Users, History, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -17,6 +20,7 @@ const Home = () => {
       <AgencyValues />
       <WhatWeDo />
       <WhyChooseUs />
+      <AboutUsSmall />
       
       {/* Stats Section */}
       <section className="py-24 bg-white relative overflow-hidden">
@@ -82,6 +86,8 @@ const Home = () => {
 
       <CarouselSection />
       <ClientsSection />
+      <BrandIdentityBanner />
+      <WorkProcess />
       <FAQSection />
       
       {/* Blog/Articles Placeholder */}

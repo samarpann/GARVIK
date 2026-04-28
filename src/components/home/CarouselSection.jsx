@@ -3,29 +3,39 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 const projects = [
   {
-    title: "Brand Management",
+    title: "PR Event",
+    image: "/images/site_assets/service_pr_events.webp",
+    category: "Events"
+  },
+  {
+    title: "Brand Promotion",
     image: "/images/site_assets/service_brand_mgmt.webp",
     category: "Strategy"
   },
   {
-    title: "Broadcast Advertising",
-    image: "/images/site_assets/service_broadcast.webp",
-    category: "Media"
+    title: "Udaan",
+    image: "/images/site_assets/hero_product_roadshow.webp",
+    category: "Campaign"
   },
   {
-    title: "Ad Film Production",
+    title: "Ad Films",
     image: "/images/site_assets/service_ad_film.webp",
     category: "Production"
   },
   {
-    title: "PR & Event Management",
-    image: "/images/site_assets/service_pr_events.webp",
+    title: "Product Road Show",
+    image: "/images/site_assets/service_product_roadshow.webp",
     category: "Events"
   },
   {
     title: "Digital Marketing",
     image: "/images/site_assets/service_digital_marketing.webp",
     category: "Digital"
+  },
+  {
+    title: "Business Conference",
+    image: "/images/site_assets/service_business_conf.webp",
+    category: "Events"
   }
 ];
 
@@ -46,7 +56,7 @@ const CarouselSection = () => {
           <motion.div
             key={index}
             whileHover={{ y: -10 }}
-            className="flex-shrink-0 w-[300px] md:w-[450px] relative rounded-3xl overflow-hidden aspect-[4/5] group shadow-lg"
+            className="flex-shrink-0 w-[280px] md:w-[380px] relative rounded-3xl overflow-hidden aspect-[4/3] group shadow-lg"
           >
             <img 
               src={project.image} 

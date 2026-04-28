@@ -78,8 +78,9 @@ const WhatWeDo = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              A 360 Integrated <span className="text-gradient">Marketing Powerhouse</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
+              A 360° Degree Integrated <br />
+              <span className="text-gradient">Digital Marketing & Advertising Company</span> 
             </h2>
             <p className="text-lg text-gray-600">
               What differentiates Garvik India in a competitive marketplace is our relationship-driven approach and holistic growth support.

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/common/ScrollToTop';
+import WhatsAppButton from './components/common/WhatsAppButton';
 
 // Lazy loading pages for performance
 const Home = lazy(() => import('./pages/Home'));
@@ -53,6 +54,7 @@ function App() {
           </Suspense>
         </main>
         <Footer />
+        <WhatsAppButton />
       </div>
     </Router>
   );

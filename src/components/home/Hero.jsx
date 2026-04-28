@@ -36,7 +36,7 @@ const carouselItems = [
 
 const Hero = () => {
   return (
-    <section className="relative h-screen min-h-[700px] overflow-hidden">
+    <section className="relative h-screen min-h-[500px] overflow-hidden">
       <Swiper
         spaceBetween={0}
         effect={'fade'}
@@ -63,7 +63,8 @@ const Hero = () => {
                   alt={item.title} 
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-black/20"></div>
               </div>
 
               {/* Content */}
@@ -74,27 +75,27 @@ const Hero = () => {
                   transition={{ duration: 0.8 }}
                   className="max-w-4xl mx-auto"
                 >
-                  <span className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider uppercase border border-primary/30 rounded-full bg-primary/10 text-primary">
-                    Strategic Advertising Agency
+                  <span className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider uppercase border border-primary/50 rounded-full bg-primary/20 text-white shadow-lg">
+                    Welcome To Garvik India 
                   </span>
                   
-                  <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-[1.1] text-gray-900 tracking-tight">
+                  <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-[1.1] text-white tracking-tight drop-shadow-lg">
                     {item.title.split(' ').map((word, i) => (
-                      <span key={i} className={word.includes('...') || i > 3 ? 'text-gradient' : ''}>
+                      <span key={i} className={word.includes('...') || i > 3 ? 'text-primary-light' : ''}>
                         {word}{' '}
                       </span>
                     ))}
                   </h1>
                   
-                  <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                  <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
                     {item.subtitle}
                   </p>
                   
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <Link to="/contact" className="btn btn-primary w-full sm:w-auto flex items-center justify-center gap-2 group">
+                    <Link to="/contact" className="btn btn-primary w-full sm:w-auto flex items-center justify-center gap-2 group shadow-xl">
                       Get Started <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
-                    <Link to="/portfolio" className="btn btn-outline w-full sm:w-auto border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white border-2">
+                    <Link to="/portfolio" className="btn btn-outline w-full sm:w-auto border-white text-white hover:bg-white hover:text-gray-900 border-2 shadow-xl backdrop-blur-sm">
                       View Our Work
                     </Link>
                   </div>
@@ -107,8 +108,8 @@ const Hero = () => {
       
       {/* Scroll Down Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
-        <span className="text-[10px] uppercase tracking-[4px] text-gray-400 font-bold">Explore</span>
-        <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent"></div>
+        <span className="text-[10px] uppercase tracking-[4px] text-white/70 font-bold drop-shadow-md">Explore</span>
+        <div className="w-px h-12 bg-gradient-to-b from-white to-transparent opacity-50"></div>
       </div>
     </section>
   );

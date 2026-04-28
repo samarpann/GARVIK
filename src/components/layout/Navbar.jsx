@@ -60,11 +60,11 @@ const Navbar = () => {
                 <div className="flex items-center gap-1 cursor-pointer">
                   <Link
                     to={link.path}
-                    className={`text-sm font-bold transition-colors hover:text-primary ${location.pathname === link.path ? 'text-primary font-bold' : 'text-gray-900'}`}
+                    className={`text-sm font-bold transition-colors hover:text-primary ${location.pathname === link.path ? 'text-primary font-bold' : (scrolled ? 'text-gray-900' : (location.pathname === '/' ? 'text-white/90' : 'text-gray-900'))}`}
                   >
                     {link.title}
                   </Link>
-                  {link.dropdown && <ChevronDown size={14} className={`transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />}
+                  {link.dropdown && <ChevronDown size={14} className={`transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''} ${scrolled ? 'text-gray-900' : (location.pathname === '/' ? 'text-white/90' : 'text-gray-900')}`} />}
                 </div>
 
                 {link.dropdown && (
@@ -98,7 +98,7 @@ const Navbar = () => {
 
           {/* Mobile Nav Toggle */}
           <button
-            className="md:hidden text-gray-900"
+            className={`md:hidden ${scrolled || location.pathname !== '/' ? 'text-gray-900' : 'text-white'}`}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
