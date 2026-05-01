@@ -67,7 +67,7 @@ const Philosophy = () => {
         >
           <span className="text-primary font-bold uppercase tracking-widest text-sm mb-6 block">Our Philosophy</span>
           <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight text-gray-900">
-            Rooted in <span className="text-gradient">Creativity & Strategic</span> Excellence
+            Rooted in <span className="text-cursive ml-2">Creativity & Strategic</span> Excellence
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
             At Garvik India, we understand that a brand is more than just a logo; it’s an ecosystem of perceptions and experiences. Our comprehensive suite of services are tangible expressions of our commitment to your vision.
@@ -138,7 +138,7 @@ const Philosophy = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="group p-8 rounded-[2rem] bg-gray-50 hover:bg-white border border-transparent hover:border-primary/20 shadow-sm hover:shadow-2xl transition-all duration-500"
+              className="group p-8 rounded-[2rem] bg-purple-50/50 hover:bg-white border border-transparent hover:border-primary/20 shadow-sm hover:shadow-2xl transition-all duration-500"
             >
               <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 group-hover:rotate-6">
                 {service.icon}

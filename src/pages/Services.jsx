@@ -90,7 +90,7 @@ const Services = () => {
           <span className="text-primary font-bold uppercase tracking-widest text-sm mb-6 block">Our Solutions</span>
           <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight text-gray-900">
             Comprehensive <br />
-            <span className="text-gradient">Brand Excellence</span>
+            <span className="text-cursive ml-2">Brand Excellence</span>
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
             We offer a comprehensive suite of integrated services tangible expressions of our commitment to your brand's success.
@@ -108,7 +108,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="group flex flex-col p-2 rounded-[2.5rem] bg-gray-50 hover:bg-white border border-transparent hover:border-primary/10 shadow-sm hover:shadow-2xl transition-all duration-500"
+              className="group flex flex-col p-2 rounded-[2.5rem] bg-purple-50/50 hover:bg-white border border-transparent hover:border-primary/10 shadow-sm hover:shadow-2xl transition-all duration-500"
             >
               <div className="relative h-64 w-full rounded-[2rem] overflow-hidden mb-8">
                 <img 

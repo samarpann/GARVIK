@@ -41,7 +41,7 @@ const AboutUsSmall = () => {
               About Us
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-              Empowering the <span className="text-gradient">Entrepreneurs of Tomorrow</span>
+              Empowering the <span className="text-cursive ml-2">Entrepreneurs of Tomorrow</span>
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               Since 2017, Garvik India has emerged as one of India's most dynamic 360° integrated digital marketing and advertising companies. We position ourselves not simply as a service provider but as a true partner in your entrepreneurial journey.
@@ -51,7 +51,7 @@ const AboutUsSmall = () => {
               {['True Growth Partner', 'Holistic Marketing Solutions', 'Mentorship & Empathy', 'End-to-End Brand Building'].map((item, index) => (
                 <li key={index} className="flex items-center text-gray-700 font-medium">
                   <CheckCircle2 className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
-                  {item}
+                  <span className="font-cursive text-2xl text-accent/90">{item}</span>
                 </li>
               ))}
             </ul>

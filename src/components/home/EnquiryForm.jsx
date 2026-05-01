@@ -15,7 +15,7 @@ const EnquiryForm = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Expert <br /><span className="text-gradient">Consultation</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Expert <br /><span className="text-cursive mt-2 block">Consultation</span></h2>
               <p className="text-gray-600 mb-8 text-lg leading-relaxed">
                 Whether it is a first-time entrepreneur launching a new product or a brand looking to scale, Garvik India becomes part of your launch team. Leave a message and let's start your impact journey.
               </p>
@@ -48,7 +48,7 @@ const EnquiryForm = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl shadow-primary/10 border border-gray-100"
+              className="bg-purple-50/50 p-8 md:p-12 rounded-[2.5rem] shadow-2xl shadow-primary/10 border border-purple-100/50"
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-8">Leave a Message</h3>
               <form className="space-y-6">

@@ -1,6 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
 import { Palette, Megaphone, Smartphone, Video, Users, Briefcase, Rocket, Globe } from 'lucide-react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const services = [
   {
@@ -69,34 +70,60 @@ const services = [
 ];
 
 const WhatWeDo = () => {
+  const containerRef = useRef(null);
+
+  useGSAP(() => {
+    // Explicitly set initial state to ensure visibility if JS fails later
+    gsap.set('.service-card', { opacity: 0, scale: 0.9, y: 30 });
+    gsap.set('.service-header', { opacity: 0, y: 50 });
+
+    gsap.to('.service-card', {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: 'top 85%',
+        toggleActions: 'play none none none'
+      },
+      scale: 1,
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      stagger: 0.1,
+      ease: 'power3.out'
+    });
+
+    gsap.to('.service-header', {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: 'top 95%',
+        toggleActions: 'play none none none'
+      },
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: 'power3.out'
+    });
+  }, { scope: containerRef });
+
   return (
-    <section className="py-24 relative overflow-hidden bg-gray-50/50">
+    <section ref={containerRef} className="py-24 relative overflow-hidden bg-gray-50/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <div className="service-header">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
               A 360° Degree Integrated <br />
-              <span className="text-gradient">Digital Marketing & Advertising Company</span> 
+              <span className="text-cursive block mt-2">Digital Marketing & Advertising Company</span> 
             </h2>
             <p className="text-lg text-gray-600">
               What differentiates Garvik India in a competitive marketplace is our relationship-driven approach and holistic growth support.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((item, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-[2.5rem] border border-gray-100 hover:border-primary/20 shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden"
+              className="service-card bg-purple-50/20 rounded-[2.5rem] border border-gray-100 hover:border-primary/20 shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden"
             >
               <div className="relative h-48 w-full overflow-hidden">
                 <img 
@@ -116,7 +143,7 @@ const WhatWeDo = () => {
                   Explore Service <span className="ml-2">→</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

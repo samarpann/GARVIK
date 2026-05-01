@@ -31,7 +31,7 @@ const Contact = () => {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-8 text-gray-900">Let's <span className="text-gradient">Connect</span></h1>
+              <h1 className="text-4xl md:text-6xl font-bold mb-8 text-gray-900">Let's <span className="text-cursive ml-2">Connect</span></h1>
               <p className="text-xl text-gray-600 mb-12">
                 Have a vision? Let's turn it into reality. Reach out to us for a personalized marketing strategy.
               </p>
@@ -43,7 +43,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-gray-900 mb-1">Email Us</h4>
-                    <a href="mailto:info@garvikindia.com" className="text-gray-600 hover:text-primary transition-colors">info@garvikindia.com</a>
+                    <a href="mailto:info@garvikadvertising.com" className="text-gray-600 hover:text-primary transition-colors">info@garvikadvertising.com</a>
                   </div>
                 </div>
 
@@ -67,7 +67,7 @@ const Contact = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className="p-8 md:p-12 rounded-3xl bg-gray-50 border border-gray-100 shadow-xl relative overflow-hidden"
+              className="p-8 md:p-12 rounded-3xl bg-purple-50/50 border border-purple-100/50 shadow-xl relative overflow-hidden"
             >
               {/* Decoration */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10 -mr-32 -mt-32"></div>

@@ -31,7 +31,7 @@ const Portfolio = () => {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-3xl mx-auto"
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900">Our <span className="text-gradient">Programs</span> & Capabilities</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900">Our <span className="text-cursive ml-2">Programs</span> & Capabilities</h1>
           <p className="text-xl text-gray-600">Transforming strategy into execution with custom solutions for every brand.</p>
         </motion.div>
       </section>
@@ -46,7 +46,7 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-10 rounded-3xl bg-gray-50 border border-gray-100 hover:border-primary transition-all hover:bg-white hover:shadow-xl"
+              className="p-10 rounded-3xl bg-purple-50/50 border border-purple-100/50 hover:border-primary transition-all hover:bg-white hover:shadow-xl"
             >
               <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-8 text-primary">
                 {program.icon}
@@ -63,7 +63,7 @@ const Portfolio = () => {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
-              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gray-900">Content That <span className="text-primary">Drives Results</span></h2>
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gray-900">Content That <span className="text-cursive ml-2 text-primary">Drives Results</span></h2>
               <p className="text-xl text-gray-600 mb-8">
                 We've produced over <span className="text-primary font-bold text-2xl">1000+ content pieces</span> with high engagement rates across all digital platforms.
               </p>
@@ -94,7 +94,7 @@ const Portfolio = () => {
       <section className="container mx-auto px-4 md:px-6">
         <div className="flex items-center gap-4 mb-16">
           <div className="h-px flex-grow bg-gray-200"></div>
-          <h2 className="text-3xl md:text-4xl font-bold whitespace-nowrap text-gray-900">Awards & <span className="text-primary">Events</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold whitespace-nowrap text-gray-900">Awards & <span className="text-cursive ml-2">Events</span></h2>
           <div className="h-px flex-grow bg-gray-200"></div>
         </div>
 

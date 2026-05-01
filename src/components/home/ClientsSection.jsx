@@ -1,8 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Quote } from 'lucide-react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -43,24 +44,57 @@ const testimonials = [
 ];
 
 const ClientsSection = () => {
+  const containerRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.from('.clients-header', {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: 'top 80%',
+      },
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out'
+    });
+
+    gsap.from('.swiper-container', {
+      scrollTrigger: {
+        trigger: '.swiper-container',
+        start: 'top 80%',
+      },
+      scale: 0.95,
+      opacity: 0,
+      duration: 1.2,
+      ease: 'power4.out'
+    });
+
+    // Floating blobs animation
+    gsap.to('.client-blob', {
+      y: 'random(-50, 50)',
+      x: 'random(-30, 30)',
+      duration: 'random(3, 6)',
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut',
+      stagger: 0.5
+    });
+  }, { scope: containerRef });
+
   return (
-    <section className="py-24 bg-gray-50 overflow-hidden relative">
+    <section ref={containerRef} className="py-24 bg-gray-50 overflow-hidden relative">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <div className="clients-header">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Happy <span className="text-gradient">Clients</span></h2>
             <p className="text-lg text-gray-600">
               Don't just take our word for it. Here is what some of our esteemed partners have to say about their experience working with Garvik India.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         {/* Testimonials Slider */}
-        <div className="relative max-w-5xl mx-auto">
+        <div className="swiper-container relative max-w-5xl mx-auto">
           <Swiper
             spaceBetween={30}
             slidesPerView={1}
@@ -74,7 +108,7 @@ const ClientsSection = () => {
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index} className="h-auto">
-                <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-lg border border-gray-100 h-full flex flex-col hover:-translate-y-2 transition-transform duration-300 relative group">
+                <div className="bg-purple-50/50 p-8 md:p-10 rounded-[2rem] shadow-lg border border-gray-100 h-full flex flex-col hover:-translate-y-2 transition-transform duration-300 relative group">
                   <Quote className="w-12 h-12 text-primary/10 absolute top-8 right-8 group-hover:text-primary/20 transition-colors" />
                   <div className="flex-grow">
                     <p className="text-gray-600 text-lg leading-relaxed italic relative z-10 mb-8">
@@ -98,8 +132,8 @@ const ClientsSection = () => {
       </div>
       
       {/* Decorative blobs */}
-      <div className="absolute top-40 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -ml-32"></div>
-      <div className="absolute bottom-20 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -mr-32"></div>
+      <div className="client-blob absolute top-40 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -ml-32"></div>
+      <div className="client-blob absolute bottom-20 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -mr-32"></div>
     </section>
   );
 };

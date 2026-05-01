@@ -45,7 +45,7 @@ const FAQSection = () => {
             <div key={index} className="border border-gray-100 rounded-2xl overflow-hidden hover:border-primary/20 transition-colors shadow-sm">
               <button
                 onClick={() => setActiveIndex(activeIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-6 text-left bg-white transition-colors"
+                className="w-full flex items-center justify-between p-6 text-left bg-purple-50/50 transition-colors"
                 aria-expanded={activeIndex === index}
               >
                 <span className="font-bold text-gray-900 pr-8">{faq.question}</span>
@@ -61,7 +61,7 @@ const FAQSection = () => {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="px-6 pb-6 text-gray-600 leading-relaxed bg-white">
+                    <div className="px-6 pb-6 text-gray-600 leading-relaxed bg-purple-50/50">
                       {faq.answer}
                     </div>
                   </motion.div>

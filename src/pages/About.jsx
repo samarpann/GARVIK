@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, Award, TrendingUp, Users, Quote } from 'lucide-react';
+import { BookOpen, Award, TrendingUp, Users, Quote, Users2 } from 'lucide-react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const coreSupport = [
   { area: "Brand Strategy & Identity", help: "Logo Design, Tagline, Positioning, Brand Voice, Vision Shaping" },
@@ -17,6 +19,21 @@ const sectors = [
 ];
 
 const About = () => {
+  const teamRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.from('.team-card', {
+      scrollTrigger: {
+        trigger: teamRef.current,
+        start: 'top 80%',
+      },
+      y: 100,
+      opacity: 0,
+      duration: 1.2,
+      ease: 'power4.out'
+    });
+  }, { scope: teamRef });
+
   return (
     <div className="pt-32 pb-24 bg-white selection:bg-primary selection:text-white">
       {/* Introduction */}
@@ -29,7 +46,7 @@ const About = () => {
           <span className="text-primary font-bold uppercase tracking-widest text-sm mb-6 block">Our Story</span>
           <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight text-gray-900">
             Lighting the Torch for <br />
-            <span className="text-gradient">Tomorrow’s Entrepreneurs</span>
+            <span className="text-cursive ml-2">Tomorrow’s Entrepreneurs</span>
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed mb-12">
             In a world where dreams are often fragile, entrepreneurship stands as a beacon of courage. Fueling that fire requires more than just ambition — it demands the power of a voice that amplifies one’s presence.
@@ -47,7 +64,7 @@ const About = () => {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
-              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gray-900">The Birth of an <span className="text-primary">Idea (2017)</span></h2>
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gray-900">The Birth of an <span className="text-cursive ml-2 text-primary">Idea (2017)</span></h2>
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p>
                   2017 was a landmark year for the Indian economy. Start-up India was on a rise, and a new wave of young founders was ready to disrupt everything. Yet, most faced a common struggle — how to take an idea and present it powerfully.
@@ -59,7 +76,7 @@ const About = () => {
             </div>
             <div className="lg:w-1/2">
               <div className="grid grid-cols-1 gap-6">
-                <div className="p-10 rounded-[2rem] bg-white shadow-xl shadow-primary/5 border border-primary/10">
+                <div className="p-10 rounded-[2rem] bg-purple-50/50 shadow-xl shadow-primary/5 border border-primary/10">
                   <BookOpen className="w-10 h-10 text-primary mb-6" />
                   <h4 className="text-2xl font-bold text-gray-900 mb-4 italic">"One Company — Infinite Possibilities"</h4>
                   <p className="text-gray-500">
@@ -103,7 +120,7 @@ const About = () => {
       <section className="py-24 bg-white mb-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">The Ripple Effect of <span className="text-gradient">Impact</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">The Ripple Effect of <span className="text-cursive ml-2">Impact</span></h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">From 2017 to 2024, our influence has touched entrepreneurs from diverse sectors.</p>
           </div>
           
@@ -115,7 +132,7 @@ const About = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="p-6 rounded-2xl bg-gray-50 border border-gray-100 text-center font-bold text-gray-700 hover:text-primary hover:border-primary/20 hover:shadow-lg transition-all"
+                className="p-6 rounded-2xl bg-purple-50/50 border border-purple-100/50 text-center font-bold text-gray-700 hover:text-primary hover:border-primary/20 hover:shadow-lg transition-all"
               >
                 {sector}
               </motion.div>
@@ -144,6 +161,34 @@ const About = () => {
             </div>
           </div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[100px] -mr-48 -mb-48"></div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section ref={teamRef} className="container mx-auto px-4 md:px-6 mb-32">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Our Amazing <span className="text-cursive ml-2">Team</span></h2>
+          <p className="text-gray-500 text-lg max-w-2xl mx-auto">The creative minds and strategic thinkers behind Garvik India's success.</p>
+        </div>
+        
+        <div className="team-card relative group rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white">
+          <img 
+            src="/images/WhatsApp Image 2026-04-21 at 10.44.23 PM.jpeg" 
+            alt="Garvik India Team" 
+            className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 p-12 text-white">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white">
+                <Users2 size={24} />
+              </div>
+              <h3 className="text-3xl md:text-4xl font-bold">Team Garvik</h3>
+            </div>
+            <p className="text-white/80 text-xl max-w-2xl leading-relaxed font-medium">
+              A collective of dreamers and doers, working hand-in-hand to redefine the future of branding and digital excellence.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -184,7 +229,7 @@ const About = () => {
 
       {/* Founder's Desk */}
       <section className="container mx-auto px-4 md:px-6 mb-24">
-        <div className="bg-gray-50 rounded-[3rem] p-10 md:p-20 flex flex-col lg:flex-row gap-16 items-center">
+        <div className="bg-purple-50/30 rounded-[3rem] p-10 md:p-20 flex flex-col lg:flex-row gap-16 items-center">
           <div className="lg:w-1/3">
             <div className="relative group">
               <div className="aspect-[3/4] rounded-[2rem] overflow-hidden bg-gray-200 shadow-2xl">

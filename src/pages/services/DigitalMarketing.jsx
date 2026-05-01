@@ -38,7 +38,7 @@ const DigitalMarketing = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-white uppercase tracking-tighter"
           >
-            Digital Marketing
+            <span className="text-cursive text-white">Digital Marketing</span>
           </motion.h1>
         </div>
       </section>
@@ -55,7 +55,7 @@ const DigitalMarketing = () => {
               />
             </div>
             <div className="lg:w-1/2">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">The Linchpin for <span className="text-primary">Modern Growth</span></h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">The Linchpin for <span className="text-cursive ml-2 text-primary">Modern Growth</span></h2>
               <p className="text-gray-600 text-lg mb-6 leading-relaxed">
                 Digital marketing is the linchpin for achieving marketing objectives, from reaching new prospects to nurturing relationships and boosting revenue. It has disrupted businesses of all sizes globally, offering a vast array of avenues for connecting with potential clients.
               </p>
@@ -68,7 +68,7 @@ const DigitalMarketing = () => {
                   <h4 className="font-bold text-gray-900">Swift Adjustments</h4>
                   <p className="text-xs text-gray-500">Real-time optimization of campaigns.</p>
                 </div>
-                <div className="p-4 rounded-xl bg-gray-50 border border-gray-100">
+                <div className="p-4 rounded-xl bg-purple-50/50 border border-purple-100/50">
                   <div className="text-primary mb-2"><Globe size={24} /></div>
                   <h4 className="font-bold text-gray-900">Global Reach</h4>
                   <p className="text-xs text-gray-500">Connect with audiences worldwide.</p>
@@ -82,9 +82,9 @@ const DigitalMarketing = () => {
       {/* specialized areas */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-16">Specialized <span className="text-primary">Avenues</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-16">Specialized <span className="text-cursive ml-2">Avenues</span></h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-white p-12 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all text-left group">
+            <div className="bg-purple-50/50 p-12 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all text-left group">
               <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all">
                 <BarChart3 size={32} />
               </div>
@@ -93,7 +93,7 @@ const DigitalMarketing = () => {
                 Creating and sharing valuable content like blogs, e-books, and videos to attract and retain a specific audience, building long-term trust and authority.
               </p>
             </div>
-            <div className="bg-white p-12 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all text-left group">
+            <div className="bg-purple-50/50 p-12 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all text-left group">
               <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all">
                 <Search size={32} />
               </div>
@@ -154,7 +154,7 @@ const DigitalMarketing = () => {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-10 rounded-3xl bg-gray-50 text-center border border-gray-100">
+            <div className="p-10 rounded-3xl bg-purple-50/50 text-center border border-purple-100/50">
               <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mx-auto mb-8 shadow-sm">
                 <Search size={40} className="text-gray-900" />
               </div>
@@ -164,7 +164,7 @@ const DigitalMarketing = () => {
               </p>
             </div>
 
-            <div className="p-10 rounded-3xl bg-gray-50 text-center border border-gray-100">
+            <div className="p-10 rounded-3xl bg-purple-50/50 text-center border border-purple-100/50">
               <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mx-auto mb-8 shadow-sm">
                 <Layout size={40} className="text-gray-900" />
               </div>
@@ -174,7 +174,7 @@ const DigitalMarketing = () => {
               </p>
             </div>
 
-            <div className="p-10 rounded-3xl bg-gray-50 text-center border border-gray-100">
+            <div className="p-10 rounded-3xl bg-purple-50/50 text-center border border-purple-100/50">
               <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mx-auto mb-8 shadow-sm">
                 <Database size={40} className="text-gray-900" />
               </div>
@@ -187,7 +187,7 @@ const DigitalMarketing = () => {
 
           <div className="mt-32 text-center">
             <h2 className="text-5xl md:text-7xl font-bold text-gray-900 mb-12">
-              Ready to <span className="text-primary">Dominate</span> the Digital Space?
+              Ready to <span className="text-cursive ml-2">Dominate</span> the Digital Space?
             </h2>
             <button className="bg-gray-900 text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-gray-800 transition-all flex items-center gap-3 mx-auto">
               Get Started <Send size={24} />

@@ -1,13 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const Navbar = () => {
+  const navRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
+
+  useGSAP(() => {
+    if (navRef.current) {
+      gsap.fromTo(navRef.current, 
+        { y: -100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1.2, ease: 'power4.out', delay: 0.2 }
+      );
+    }
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,11 +53,22 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-lg border-b border-gray-100 py-3 shadow-sm' : 'bg-transparent py-5'}`}>
+    <nav ref={navRef} className={`fixed w-full z-[100] transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-lg border-b border-gray-100 py-3 shadow-sm' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
-            <img src="/images/site_assets/logo.png" alt="Garvik India" className="h-10 w-auto" />
+          <Link to="/" className="flex items-center space-x-2 group">
+            <img 
+              src="/images/site_assets/logo.png" 
+              alt="Garvik India" 
+              className="h-10 w-auto group-hover:scale-110 transition-transform" 
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'block';
+              }}
+            />
+            <span className="hidden text-xl font-bold text-primary tracking-tighter">
+              GARVIK<span className="text-accent">INDIA</span>
+            </span>
           </Link>
 
           {/* Desktop Nav */}
@@ -60,11 +83,11 @@ const Navbar = () => {
                 <div className="flex items-center gap-1 cursor-pointer">
                   <Link
                     to={link.path}
-                    className={`text-sm font-bold transition-colors hover:text-primary ${location.pathname === link.path ? 'text-primary font-bold' : (scrolled ? 'text-gray-900' : (location.pathname === '/' ? 'text-white/90' : 'text-gray-900'))}`}
+                    className={`text-sm font-bold transition-colors hover:text-primary ${scrolled ? 'text-gray-900' : 'text-white'}`}
                   >
                     {link.title}
                   </Link>
-                  {link.dropdown && <ChevronDown size={14} className={`transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''} ${scrolled ? 'text-gray-900' : (location.pathname === '/' ? 'text-white/90' : 'text-gray-900')}`} />}
+                  {link.dropdown && <ChevronDown size={14} className={`transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''} ${scrolled ? 'text-gray-900' : 'text-white'}`} />}
                 </div>
 
                 {link.dropdown && (

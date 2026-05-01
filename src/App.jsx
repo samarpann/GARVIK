@@ -1,9 +1,14 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/common/ScrollToTop';
 import WhatsAppButton from './components/common/WhatsAppButton';
+import AnimatedBackground from './components/common/AnimatedBackground';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 // Lazy loading pages for performance
 const Home = lazy(() => import('./pages/Home'));
@@ -23,10 +28,19 @@ const DigitalMarketing = lazy(() => import('./pages/services/DigitalMarketing'))
 const CreativeDesign = lazy(() => import('./pages/services/CreativeDesign'));
 
 function App() {
+  useEffect(() => {
+    // Refresh ScrollTrigger after a short delay to account for dynamic content loading
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-dark text-white selection:bg-primary selection:text-white">
+      <AnimatedBackground />
+      <div className="flex flex-col min-h-screen bg-white text-gray-900 selection:bg-primary selection:text-white">
         <Navbar />
         <main className="flex-grow">
           <Suspense fallback={

@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper/modules';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 // Import Swiper styles
 import 'swiper/css';
@@ -35,8 +40,31 @@ const carouselItems = [
 ];
 
 const Hero = () => {
+  const containerRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.from('.hero-content > *', {
+      opacity: 0,
+      y: 100,
+      duration: 1.5,
+      ease: 'power4.out',
+      stagger: 0.2
+    });
+
+    gsap.to('.hero-image', {
+      scrollTrigger: {
+        trigger: '.hero-section',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true
+      },
+      y: 200,
+      scale: 1.2
+    });
+  }, { scope: containerRef });
+
   return (
-    <section className="relative h-screen min-h-[500px] overflow-hidden">
+    <section ref={containerRef} className="hero-section relative h-screen min-h-[500px] overflow-hidden">
       <Swiper
         spaceBetween={0}
         effect={'fade'}
@@ -61,7 +89,7 @@ const Hero = () => {
                 <img 
                   src={item.image} 
                   alt={item.title} 
-                  className="h-full w-full object-cover"
+                  className="hero-image h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
                 <div className="absolute inset-0 bg-black/20"></div>
@@ -73,8 +101,9 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="max-w-4xl mx-auto"
+                  className="hero-content max-w-4xl mx-auto"
                 >
+                  <span className="text-cursive mb-4 block">Creative Excellence Since 2017</span>
                   <span className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider uppercase border border-primary/50 rounded-full bg-primary/20 text-white shadow-lg">
                     Welcome To Garvik India 
                   </span>
