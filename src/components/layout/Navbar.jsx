@@ -60,7 +60,7 @@ const Navbar = () => {
             <img 
               src="/images/site_assets/logo.png" 
               alt="Garvik India" 
-              className="h-10 w-auto group-hover:scale-110 transition-transform" 
+              className="h-14 w-auto group-hover:scale-110 transition-transform" 
               onError={(e) => {
                 e.target.style.display = 'none';
                 e.target.nextSibling.style.display = 'block';

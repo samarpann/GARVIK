@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Trophy, Globe, Rocket, Users2 } from 'lucide-react';
 import ClientsSection from '../components/home/ClientsSection';
+import LogoMarquee from '../components/home/LogoMarquee';
 
 const programs = [
   {
@@ -106,7 +107,7 @@ const Portfolio = () => {
             <img 
                src="/images/site_assets/service_pr_events.webp" 
                alt="Coffee Table Book Launch" 
-               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+               className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
             <div className="absolute bottom-0 left-0 p-8">
@@ -125,7 +126,7 @@ const Portfolio = () => {
             <img 
                src="/images/site_assets/service_business_conf.webp" 
                alt="Industry Events" 
-               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+               className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
             <div className="absolute bottom-0 left-0 p-8">
@@ -136,6 +137,27 @@ const Portfolio = () => {
               <h3 className="text-2xl font-bold text-white">Industry Excellence Summit</h3>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Brands Banner Section */}
+      <section className="py-24 bg-white border-t border-gray-50 overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6 mb-16">
+          <div className="text-center">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Brands We've <span className="text-cursive ml-2">Empowered</span></h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Our portfolio includes a diverse range of brands that have trusted us with their brand management and digital identity.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-8">
+          <LogoMarquee speed={50} />
+          <LogoMarquee reverse={true} speed={60} />
+        </div>
+        
+        <div className="mt-16 text-center container mx-auto px-4">
+          <p className="text-gray-500 font-medium italic">And many more global and local partners...</p>
         </div>
       </section>
 

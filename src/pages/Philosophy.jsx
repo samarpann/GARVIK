@@ -94,7 +94,7 @@ const Philosophy = () => {
               </div>
               <h2 className="text-4xl font-bold text-white mb-6">Our Vision</h2>
               <p className="text-white/70 text-lg leading-relaxed mb-8">
-                To empower brands to stand out in a crowded marketplace, forging deep connections with their audience. We strive to be the architects of brand identity, ensuring every touchpoint communicates a cohesive, compelling message. we see brands becoming vehicles of positive change.
+                To be the primary catalyst for entrepreneurial success in India, transforming fragile dreams into robust, market-leading brands. We envision a future where every visionary has the launchpad they need to create their own destiny rather than waiting for it to arrive.
               </p>
               <div className="flex items-center gap-3 text-primary font-bold italic">
                 <Award size={20} />
@@ -112,7 +112,7 @@ const Philosophy = () => {
               </div>
               <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
               <p className="text-white/70 text-lg leading-relaxed mb-8">
-                To craft brands that not only excel in the marketplace but also resonate deeply with their audience. Through strategic insights and creative brilliance, we empower brands to become beacons of innovation and purpose. We nurture a team of passionate professionals who share our mission.
+                To streamline the complex world of marketing into a power-packed growth solution. We mission to empower start-ups and SMEs with strategy, creativity, and technology, providing the powerful voice needed to amplify their presence and disrupt the marketplace.
               </p>
               <div className="flex items-center gap-3 text-primary font-bold italic">
                 <CheckCircle2 size={20} />

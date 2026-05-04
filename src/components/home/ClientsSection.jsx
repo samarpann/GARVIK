@@ -4,21 +4,10 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import { Quote } from 'lucide-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import LogoMarquee from './LogoMarquee';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-const clientLogos = [
-  '/images/clients/x5xxxc.webp',
-  '/images/clients/x1.webp',
-  '/images/clients/x3.webp',
-  '/images/clients/x4.webp',
-  '/images/clients/x5.webp',
-  '/images/clients/x6.webp',
-  '/images/clients/x7.webp',
-  '/images/clients/x8.webp',
-  '/images/clients/x9.webp',
-  '/images/clients/x10.webp'
-];
 
 const testimonials = [
   {
@@ -87,9 +76,16 @@ const ClientsSection = () => {
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <div className="clients-header">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Happy <span className="text-gradient">Clients</span></h2>
-            <p className="text-lg text-gray-600">
-              Don't just take our word for it. Here is what some of our esteemed partners have to say about their experience working with Garvik India.
+            <p className="text-lg text-gray-600 mb-12">
+              Trusted by leading brands across industries. Our commitment to excellence has helped us build lasting partnerships.
             </p>
+          </div>
+
+          {/* Logo Slider */}
+          <LogoMarquee speed={40} />
+
+          <div className="clients-header">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 mt-16 italic">What Our Partners Say</h3>
           </div>
         </div>
 

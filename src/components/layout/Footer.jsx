@@ -29,7 +29,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center space-x-2">
-              <img src="/images/site_assets/logo.png" alt="Garvik India" className="h-10 w-auto" />
+              <img src="/images/site_assets/logo.png" alt="Garvik India" className="h-14 w-auto" />
             </Link>
             <p className="text-gray-600 max-w-xs leading-relaxed">
               We empower visions of Business leaders. A 360 Integrated Marketing & Advertising Partner driving business outcomes via creative, media & influencer marketing.

@@ -45,42 +45,68 @@ const About = () => {
         >
           <span className="text-primary font-bold uppercase tracking-widest text-sm mb-6 block">Our Story</span>
           <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight text-gray-900">
-            Lighting the Torch for <br />
-            <span className="text-cursive ml-2">Tomorrow’s Entrepreneurs</span>
+            A Beacon of Courage for <br />
+            <span className="text-cursive ml-2">Visionaries & Creators</span>
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed mb-12">
-            In a world where dreams are often fragile, entrepreneurship stands as a beacon of courage. Fueling that fire requires more than just ambition — it demands the power of a voice that amplifies one’s presence.
-          </p>
+          <div className="text-xl text-gray-600 leading-relaxed mb-12 space-y-6">
+            <p>
+              In a world where dreams are often fragile and the path to success is anything but linear, entrepreneurship stands as a beacon of courage. It is a fire that burns inside visionaries — those who choose to create their own future rather than wait for it to arrive.
+            </p>
+            <p>
+              Fueling that fire requires more than just ambition. It demands guidance, visibility, resources, networks, and—most importantly—the power of a voice that amplifies one’s presence in the marketplace.
+            </p>
+          </div>
         </motion.div>
       </section>
 
-      {/* The Birth of an Idea */}
-      <section className="py-24 bg-gray-50 border-y border-gray-100 mb-24 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
-          <div className="absolute top-10 left-10 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
+      {/* The Power Section */}
+      <section className="py-24 bg-primary/5 mb-24 relative overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Partnering in the <span className="text-cursive">Entrepreneurial Journey</span></h2>
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+              <p>
+                Since 2017, Garvik India has been that power. Emerging as one of India’s most dynamic 360° integrated advertising and digital marketing companies, Garvik India has positioned itself not simply as a service provider but as a true partner in the entrepreneurial journey.
+              </p>
+              <p>
+                With its headquarters in India and a growing footprint across major regions, the company has been silently scripting success stories behind some of the most promising start-ups, SMEs, and emerging brands across industries.
+              </p>
+              <p className="font-bold text-primary italic">
+                But to understand how Garvik India empowers entrepreneurs today, we must first take a few steps back — to understand how it all began.
+              </p>
+            </div>
+          </div>
         </div>
-        
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
+      </section>
+
+      {/* The Birth of an Idea */}
+      <section className="py-24 bg-white mb-24">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col lg:flex-row gap-16 items-start">
             <div className="lg:w-1/2">
               <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gray-900">The Birth of an <span className="text-cursive ml-2 text-primary">Idea (2017)</span></h2>
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p>
-                  2017 was a landmark year for the Indian economy. Start-up India was on a rise, and a new wave of young founders was ready to disrupt everything. Yet, most faced a common struggle — how to take an idea and present it powerfully.
+                  2017 was a landmark year for the Indian economy. Start-up India was on a rise, the focus on “Make in India” was growing, and a new wave of young founders was ready to disrupt everything from agriculture and healthcare to retail and technology.
                 </p>
                 <p>
-                  Into that gap stepped Garvik India — a company that did not want to be another vendor, but rather a <span className="text-primary font-bold">"complete growth partner"</span>. Our purpose? To give every entrepreneur a launchpad built on strategy, creativity, and affordability.
+                  Yet, most entrepreneurs faced a common struggle — how to take an idea and present it to the market powerfully. While India was filled with creative freelancers and marketing agencies, most early-stage entrepreneurs found themselves priced out of quality branding, left confused by complicated jargon, and stuck between design studios, digital consultants, and PR agencies who rarely communicated with each other.
                 </p>
               </div>
             </div>
             <div className="lg:w-1/2">
-              <div className="grid grid-cols-1 gap-6">
-                <div className="p-10 rounded-[2rem] bg-purple-50/50 shadow-xl shadow-primary/5 border border-primary/10">
-                  <BookOpen className="w-10 h-10 text-primary mb-6" />
-                  <h4 className="text-2xl font-bold text-gray-900 mb-4 italic">"One Company — Infinite Possibilities"</h4>
-                  <p className="text-gray-500">
-                    Instead of scattering budgets across multiple agencies, founders discovered that Garvik India’s unique structure covered all key pillars of growth under a single umbrella.
+              <div className="p-10 rounded-[2rem] bg-gray-900 text-white shadow-2xl relative">
+                <div className="absolute top-0 right-0 p-8 opacity-20">
+                  <BookOpen size={64} />
+                </div>
+                <h3 className="text-2xl font-bold mb-6">Into the Gap stepped Garvik India</h3>
+                <p className="text-white/80 text-lg leading-relaxed mb-8">
+                  A company that did not want to be another vendor, but rather a <span className="text-primary-light font-bold">“complete growth partner”</span> — streamlining the complex world of marketing and communications into one power-packed solution.
+                </p>
+                <div className="p-6 bg-white/10 rounded-2xl border border-white/10">
+                  <h4 className="text-primary-light font-bold uppercase tracking-wider text-sm mb-2">Our Purpose</h4>
+                  <p className="text-white font-medium italic">
+                    To give every entrepreneur and business a launchpad built on strategy, creativity, technology, and affordability.
                   </p>
                 </div>
               </div>

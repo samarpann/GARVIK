@@ -41,10 +41,10 @@ const AboutUsSmall = () => {
               About Us
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-              Empowering the <span className="text-cursive ml-2">Entrepreneurs of Tomorrow</span>
+              A Voice That <span className="text-cursive ml-2">Amplifies Presence</span>
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Since 2017, Garvik India has emerged as one of India's most dynamic 360° integrated digital marketing and advertising companies. We position ourselves not simply as a service provider but as a true partner in your entrepreneurial journey.
+              In a world where dreams are fragile, entrepreneurship stands as a beacon of courage. Since 2017, Garvik India has been the power scripting success stories behind promising start-ups and SMEs across industries. We are not just a service provider, but a true partner in your entrepreneurial journey.
             </p>
             
             <ul className="space-y-4 mb-10">
