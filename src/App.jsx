@@ -26,6 +26,9 @@ const Conferences = lazy(() => import('./pages/services/Conferences'));
 const RoadShow = lazy(() => import('./pages/services/RoadShow'));
 const DigitalMarketing = lazy(() => import('./pages/services/DigitalMarketing'));
 const CreativeDesign = lazy(() => import('./pages/services/CreativeDesign'));
+const CelebrityEndorsement = lazy(() => import('./pages/services/CelebrityEndorsement'));
+const CelebrityEnrollment = lazy(() => import('./pages/services/CelebrityEnrollment'));
+const AIVideos = lazy(() => import('./pages/services/AIVideos'));
 
 function App() {
   useEffect(() => {
@@ -64,6 +67,9 @@ function App() {
               <Route path="/product-road-show" element={<RoadShow />} />
               <Route path="/digital-marketing" element={<DigitalMarketing />} />
               <Route path="/creative-design-content" element={<CreativeDesign />} />
+              <Route path="/celebrity-endorsement" element={<CelebrityEndorsement />} />
+              <Route path="/celebrity-enrollment" element={<CelebrityEnrollment />} />
+              <Route path="/ai-videos" element={<AIVideos />} />
             </Routes>
           </Suspense>
         </main>

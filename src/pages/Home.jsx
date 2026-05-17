@@ -99,7 +99,7 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-purple-50/50 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+              <div key={i} className="bg-sky-50/50 rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
                 <div className="aspect-video bg-gray-200 overflow-hidden">
                   <img src={`https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600&sig=${i}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Blog" />
                 </div>

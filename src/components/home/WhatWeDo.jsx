@@ -123,7 +123,7 @@ const WhatWeDo = () => {
           {services.map((item, index) => (
             <div
               key={index}
-              className="service-card bg-purple-50/20 rounded-[2.5rem] border border-gray-100 hover:border-primary/20 shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden"
+              className="service-card bg-sky-50/50 rounded-[2.5rem] border border-gray-100 hover:border-primary/20 shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden"
             >
               <div className="relative h-48 w-full overflow-hidden">
                 <img 

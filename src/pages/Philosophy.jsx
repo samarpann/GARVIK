@@ -52,6 +52,16 @@ const detailedServices = [
     title: "Celebrity Endorsement",
     description: "Strategic partnerships with influential voices to skyrocket brand trust and market positioning.",
     icon: <Star className="w-6 h-6" />
+  },
+  {
+    title: "Celebrity Enrollment",
+    description: "Onboarding celebrities for long-term brand associations and exclusive event appearances.",
+    icon: <Users className="w-6 h-6" />
+  },
+  {
+    title: "AI Videos",
+    description: "Leveraging cutting-edge AI technology to create hyper-realistic video content and personalized brand messages.",
+    icon: <Video className="w-6 h-6" />
   }
 ];
 
@@ -138,7 +148,7 @@ const Philosophy = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="group p-8 rounded-[2rem] bg-purple-50/50 hover:bg-white border border-transparent hover:border-primary/20 shadow-sm hover:shadow-2xl transition-all duration-500"
+              className="group p-8 rounded-[2rem] bg-sky-50/50 hover:bg-white border border-transparent hover:border-primary/20 shadow-sm hover:shadow-2xl transition-all duration-500"
             >
               <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 group-hover:rotate-6">
                 {service.icon}

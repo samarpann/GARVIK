@@ -46,6 +46,9 @@ const Navbar = () => {
         { title: 'Product Road Show', path: '/product-road-show' },
         { title: 'Digital Marketing', path: '/digital-marketing' },
         { title: 'Creative Design & Content', path: '/creative-design-content' },
+        { title: 'Celebrity Endorsement', path: '/celebrity-endorsement' },
+        { title: 'Celebrity Enrollment', path: '/celebrity-enrollment' },
+        { title: 'AI Videos', path: '/ai-videos' },
       ]
     },
     { title: 'Portfolio', path: '/portfolio' },
@@ -136,7 +139,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-b border-gray-100 overflow-hidden shadow-lg"
+            className="md:hidden bg-white border-b border-gray-100 shadow-lg max-h-[80vh] overflow-y-auto"
           >
             <div className="flex flex-col p-4 space-y-4">
               {navLinks.map((link) => (

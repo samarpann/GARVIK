@@ -74,6 +74,20 @@ const detailedServices = [
     icon: <Star className="w-8 h-8" />,
     color: "from-yellow-500 to-yellow-600",
     image: "/images/11.jpeg" // High profile
+  },
+  {
+    title: "Celebrity Enrollment",
+    description: "Onboarding celebrities for long-term brand associations and exclusive event appearances.",
+    icon: <Users className="w-8 h-8" />,
+    color: "from-purple-500 to-indigo-600",
+    image: "/images/15.jpeg" 
+  },
+  {
+    title: "AI Videos",
+    description: "Leveraging cutting-edge AI technology to create hyper-realistic video content and personalized brand messages.",
+    icon: <Video className="w-8 h-8" />,
+    color: "from-blue-600 to-cyan-500",
+    image: "/images/13.MP4" // Using an existing video/image reference
   }
 ];
 
@@ -108,7 +122,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="group flex flex-col p-2 rounded-[2.5rem] bg-purple-50/50 hover:bg-white border border-transparent hover:border-primary/10 shadow-sm hover:shadow-2xl transition-all duration-500"
+              className="group flex flex-col p-2 rounded-[2.5rem] bg-sky-50/50 hover:bg-white border border-transparent hover:border-primary/10 shadow-sm hover:shadow-2xl transition-all duration-500"
             >
               <div className="relative h-64 w-full rounded-[2rem] overflow-hidden mb-8">
                 <img 

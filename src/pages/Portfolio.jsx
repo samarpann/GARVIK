@@ -47,7 +47,7 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-10 rounded-3xl bg-purple-50/50 border border-purple-100/50 hover:border-primary transition-all hover:bg-white hover:shadow-xl"
+              className="p-10 rounded-3xl bg-sky-50/50 border border-sky-100/50 hover:border-primary transition-all hover:bg-white hover:shadow-xl"
             >
               <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-8 text-primary">
                 {program.icon}

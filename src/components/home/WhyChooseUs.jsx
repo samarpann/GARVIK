@@ -68,7 +68,7 @@ const WhyChooseUs = () => {
 
         <div className="why-grid grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Section 1 */}
-          <div className="why-left p-10 rounded-[2.5rem] bg-purple-50/50 border border-purple-100/50 shadow-lg hover:shadow-2xl hover:border-primary/20 transition-all duration-500 relative group overflow-hidden">
+          <div className="why-left p-10 rounded-[2.5rem] bg-sky-50/50 border border-sky-100/50 shadow-lg hover:shadow-2xl hover:border-primary/20 transition-all duration-500 relative group overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10 group-hover:scale-150 transition-transform duration-700"></div>
             <div className="mb-8 p-4 rounded-2xl bg-white shadow-sm inline-block text-primary">
               <Target className="w-8 h-8" />
@@ -88,7 +88,7 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Section 2 */}
-          <div className="why-right p-10 rounded-[2.5rem] bg-pink-50/50 border border-pink-100/50 shadow-lg hover:shadow-2xl hover:border-primary/20 transition-all duration-500 relative group overflow-hidden">
+          <div className="why-right p-10 rounded-[2.5rem] bg-sky-50/50 border border-sky-100/50 shadow-lg hover:shadow-2xl hover:border-primary/20 transition-all duration-500 relative group overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-bl-full -z-10 group-hover:scale-150 transition-transform duration-700"></div>
             <div className="mb-8 p-4 rounded-2xl bg-white shadow-sm inline-block text-accent">
               <HeartHandshake className="w-8 h-8" />

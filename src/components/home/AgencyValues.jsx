@@ -9,21 +9,21 @@ const values = [
     title: "Creative Integrity",
     description: "Bridging the gap between brand identity and consumer perception through bold, honest creativity.",
     color: "from-purple-500 to-indigo-600",
-    bgLight: "bg-purple-50/80"
+    bgLight: "bg-sky-50/50"
   },
   {
     icon: <HeartHandshake className="w-8 h-8" />,
     title: "True Partnership",
     description: "We don't just execute projects; we become part of your growth story as lifelong companions.",
     color: "from-pink-500 to-rose-600",
-    bgLight: "bg-pink-50/80"
+    bgLight: "bg-sky-50/50"
   },
   {
     icon: <Rocket className="w-8 h-8" />,
     title: "Impactful Growth",
     description: "Focusing on tangible business outcomes and scaling visions into market-leading brands.",
     color: "from-blue-500 to-cyan-600",
-    bgLight: "bg-blue-50/80"
+    bgLight: "bg-sky-50/50"
   }
 ];
 

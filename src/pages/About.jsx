@@ -122,7 +122,7 @@ const About = () => {
           <p className="text-gray-500">How we help entrepreneurs achieve success across every touchpoint.</p>
         </div>
         
-        <div className="overflow-hidden rounded-[2.5rem] border border-gray-100 shadow-2xl">
+        <div className="overflow-hidden rounded-[2.5rem] border border-sky-100 shadow-2xl">
           <table className="w-full text-left border-collapse">
             <thead className="bg-gray-900 text-white">
               <tr>
@@ -130,11 +130,11 @@ const About = () => {
                 <th className="p-8 text-lg font-bold">How It Helps Entrepreneurs</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-100">
+            <tbody className="divide-y divide-sky-100">
               {coreSupport.map((item, index) => (
-                <tr key={index} className="hover:bg-gray-50/50 transition-colors">
-                  <td className="p-8 font-bold text-gray-900 bg-gray-50/30 w-1/3">{item.area}</td>
-                  <td className="p-8 text-gray-600">{item.help}</td>
+                <tr key={index} className="hover:bg-sky-50/80 transition-colors">
+                  <td className="p-8 font-bold text-gray-900 bg-sky-50/40 w-1/3">{item.area}</td>
+                  <td className="p-8 text-gray-600 bg-sky-50/20">{item.help}</td>
                 </tr>
               ))}
             </tbody>
@@ -147,7 +147,7 @@ const About = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">The Ripple Effect of <span className="text-cursive ml-2">Impact</span></h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto">From 2017 to 2024, our influence has touched entrepreneurs from diverse sectors.</p>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto">From 2017 to  present, our influence has touched entrepreneurs from diverse sectors.</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -158,7 +158,7 @@ const About = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="p-6 rounded-2xl bg-purple-50/50 border border-purple-100/50 text-center font-bold text-gray-700 hover:text-primary hover:border-primary/20 hover:shadow-lg transition-all"
+                className="p-6 rounded-2xl bg-sky-50/50 border border-sky-100/50 text-center font-bold text-gray-700 hover:text-primary hover:border-primary/20 hover:shadow-lg transition-all"
               >
                 {sector}
               </motion.div>
@@ -197,21 +197,21 @@ const About = () => {
           <p className="text-gray-500 text-lg max-w-2xl mx-auto">The creative minds and strategic thinkers behind Garvik India's success.</p>
         </div>
         
-        <div className="team-card relative group rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white">
+        <div className="max-w-4xl mx-auto team-card relative group rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white">
           <img 
             src="/images/WhatsApp Image 2026-04-21 at 10.44.23 PM.jpeg" 
             alt="Garvik India Team" 
-            className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105" 
+            className="w-full h-[400px] md:h-[500px] object-cover transition-transform duration-1000 group-hover:scale-105" 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 p-12 text-white">
+          <div className="absolute bottom-0 left-0 p-8 md:p-12 text-white">
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary flex items-center justify-center text-white">
                 <Users2 size={24} />
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold">Team Garvik</h3>
+              <h3 className="text-2xl md:text-4xl font-bold">Team Garvik</h3>
             </div>
-            <p className="text-white/80 text-xl max-w-2xl leading-relaxed font-medium">
+            <p className="text-white/80 text-lg md:text-xl max-w-2xl leading-relaxed font-medium">
               A collective of dreamers and doers, working hand-in-hand to redefine the future of branding and digital excellence.
             </p>
           </div>
