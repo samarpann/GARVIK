@@ -15,6 +15,36 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
+const blogPosts = [
+  {
+    id: 1,
+    title: "How to build a brand identity that lasts for decades.",
+    category: "Marketing Trends",
+    date: "April 18, 2026",
+    excerpt: "Learn the secret step-by-step approach we use at Garvik India...",
+    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600",
+    bgClass: "bg-indigo-100"
+  },
+  {
+    id: 2,
+    title: "The power of visual storytelling in digital age.",
+    category: "Creative Design",
+    date: "May 2, 2026",
+    excerpt: "Discover how compelling visuals can transform your brand message...",
+    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600",
+    bgClass: "bg-rose-100"
+  },
+  {
+    id: 3,
+    title: "Maximizing ROI with data-driven PR campaigns.",
+    category: "Public Relations",
+    date: "June 15, 2026",
+    excerpt: "Why traditional PR is evolving and how to stay ahead of the curve...",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600",
+    bgClass: "bg-amber-100"
+  }
+];
+
 const Home = () => {
   const statsRef = useRef(null);
 
@@ -98,16 +128,16 @@ const Home = () => {
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-sky-50/50 rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+            {blogPosts.map((post) => (
+              <div key={post.id} className={`${post.bgClass} rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-primary/20 group`}>
                 <div className="aspect-video bg-gray-200 overflow-hidden">
-                  <img src={`https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600&sig=${i}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Blog" />
+                  <img src={post.image} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt={post.title} />
                 </div>
                 <div className="p-8">
-                  <div className="text-xs font-bold text-primary uppercase mb-4 tracking-widest">Marketing Trends</div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">How to build a brand identity that lasts for decades.</h4>
-                  <p className="text-gray-500 text-sm mb-6">Learn the secret step-by-step approach we use at Garvik India...</p>
-                  <span className="text-gray-400 text-xs font-medium">April 18, 2026</span>
+                  <div className="text-xs font-bold text-primary uppercase mb-4 tracking-widest">{post.category}</div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">{post.title}</h4>
+                  <p className="text-gray-600 text-sm mb-6">{post.excerpt}</p>
+                  <span className="text-gray-500 text-xs font-medium">{post.date}</span>
                 </div>
               </div>
             ))}

@@ -18,6 +18,17 @@ const sectors = [
   "Manufacturing & Technology", "Hospitality & Lifestyle", "Agriculture & Environment", "Fashion, Art & Culture"
 ];
 
+const bgColors = [
+  "bg-purple-100",
+  "bg-pink-100",
+  "bg-blue-100",
+  "bg-cyan-100",
+  "bg-emerald-100",
+  "bg-orange-100",
+  "bg-rose-100",
+  "bg-indigo-100"
+];
+
 const About = () => {
   const teamRef = useRef(null);
 
@@ -130,11 +141,11 @@ const About = () => {
                 <th className="p-8 text-lg font-bold">How It Helps Entrepreneurs</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-sky-100">
+            <tbody className="divide-y divide-white">
               {coreSupport.map((item, index) => (
-                <tr key={index} className="hover:bg-sky-50/80 transition-colors">
-                  <td className="p-8 font-bold text-gray-900 bg-sky-50/40 w-1/3">{item.area}</td>
-                  <td className="p-8 text-gray-600 bg-sky-50/20">{item.help}</td>
+                <tr key={index} className={`${bgColors[index % bgColors.length]} transition-colors hover:brightness-95`}>
+                  <td className="p-8 font-bold text-gray-900 w-1/3 border-r border-white/50">{item.area}</td>
+                  <td className="p-8 text-gray-800">{item.help}</td>
                 </tr>
               ))}
             </tbody>
@@ -158,7 +169,7 @@ const About = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="p-6 rounded-2xl bg-sky-50/50 border border-sky-100/50 text-center font-bold text-gray-700 hover:text-primary hover:border-primary/20 hover:shadow-lg transition-all"
+                className={`p-6 rounded-2xl ${bgColors[index % bgColors.length]} border border-white/50 text-center font-bold text-gray-800 hover:shadow-xl hover:-translate-y-1 transition-all`}
               >
                 {sector}
               </motion.div>

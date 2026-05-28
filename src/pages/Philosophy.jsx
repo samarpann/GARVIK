@@ -65,6 +65,17 @@ const detailedServices = [
   }
 ];
 
+const bgColors = [
+  "bg-purple-100",
+  "bg-pink-100",
+  "bg-blue-100",
+  "bg-cyan-100",
+  "bg-emerald-100",
+  "bg-orange-100",
+  "bg-rose-100",
+  "bg-indigo-100"
+];
+
 const Philosophy = () => {
   return (
     <div className="pt-32 pb-24 bg-white selection:bg-primary selection:text-white">
@@ -148,7 +159,7 @@ const Philosophy = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="group p-8 rounded-[2rem] bg-sky-50/50 hover:bg-white border border-transparent hover:border-primary/20 shadow-sm hover:shadow-2xl transition-all duration-500"
+              className={`group p-8 rounded-[2rem] ${bgColors[index % bgColors.length]} hover:bg-white border border-transparent hover:border-primary/20 shadow-sm hover:shadow-2xl transition-all duration-500`}
             >
               <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 group-hover:rotate-6">
                 {service.icon}

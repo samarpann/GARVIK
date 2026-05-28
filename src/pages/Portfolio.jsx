@@ -22,6 +22,17 @@ const programs = [
   }
 ];
 
+const bgColors = [
+  "bg-purple-100",
+  "bg-pink-100",
+  "bg-blue-100",
+  "bg-cyan-100",
+  "bg-emerald-100",
+  "bg-orange-100",
+  "bg-rose-100",
+  "bg-indigo-100"
+];
+
 const Portfolio = () => {
   return (
     <div className="pt-32 pb-24 bg-white">
@@ -47,9 +58,9 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-10 rounded-3xl bg-sky-50/50 border border-sky-100/50 hover:border-primary transition-all hover:bg-white hover:shadow-xl"
+              className={`p-10 rounded-3xl ${bgColors[index % bgColors.length]} border border-white/50 hover:border-primary transition-all hover:bg-white hover:shadow-xl`}
             >
-              <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-8 text-primary">
+              <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center mb-8 text-primary shadow-sm">
                 {program.icon}
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900">{program.title}</h3>

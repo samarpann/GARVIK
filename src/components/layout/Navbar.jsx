@@ -106,7 +106,7 @@ const Navbar = () => {
                           <Link
                             key={sub.title}
                             to={sub.path}
-                            className="block px-6 py-2.5 text-sm font-bold text-gray-900 hover:bg-gray-50 hover:text-primary transition-colors"
+                            className="block px-6 py-2.5 text-sm font-bold text-gray-900 hover:bg-primary hover:text-white transition-colors"
                           >
                             {sub.title}
                           </Link>
