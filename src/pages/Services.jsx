@@ -76,7 +76,7 @@ const detailedServices = [
     image: "/images/11.jpeg" // High profile
   },
   {
-    title: "Celebrity Enrollment",
+    title: "Outdoor Advertising",
     description: "Onboarding celebrities for long-term brand associations and exclusive event appearances.",
     icon: <Users className="w-8 h-8" />,
     color: "from-purple-500 to-indigo-600",

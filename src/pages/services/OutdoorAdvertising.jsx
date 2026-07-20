@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus, Users, Sparkles, CheckCircle2, Ticket, Send, Search, Layout, Database } from 'lucide-react';
 
-const CelebrityEnrollment = () => {
+const OutdoorAdvertising = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const faqs = [
@@ -31,7 +31,7 @@ const CelebrityEnrollment = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src="/images/site_assets/service_product_roadshow.webp" 
-            alt="Celebrity Enrollment" 
+            alt="Outdoor Advertising" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/60"></div>
@@ -42,7 +42,7 @@ const CelebrityEnrollment = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-white leading-tight"
           >
-            Celebrity Enrollment
+            Outdoor Advertising
           </motion.h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto mt-6">
             Forge long-term partnerships and invite top-tier stars to anchor your premium corporate and public events.
@@ -57,7 +57,7 @@ const CelebrityEnrollment = () => {
             <div className="lg:w-1/2">
               <img 
                 src="/images/site_assets/service_creative_design.webp" 
-                alt="Celebrity Enrollment Experience" 
+                alt="Outdoor Advertising Experience" 
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>
@@ -184,4 +184,4 @@ const CelebrityEnrollment = () => {
   );
 };
 
-export default CelebrityEnrollment;
+export default OutdoorAdvertising;

@@ -110,7 +110,7 @@ const WhatWeDo = () => {
         <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="service-header">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-              A 360° Degree Integrated <br />
+              A 360° Integrated <br />
               <span className="text-cursive block mt-2">Digital Marketing & Advertising Company</span> 
             </h2>
             <p className="text-lg text-gray-600">

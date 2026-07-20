@@ -54,7 +54,7 @@ const detailedServices = [
     icon: <Star className="w-6 h-6" />
   },
   {
-    title: "Celebrity Enrollment",
+    title: "Outdoor Advertising",
     description: "Onboarding celebrities for long-term brand associations and exclusive event appearances.",
     icon: <Users className="w-6 h-6" />
   },

@@ -47,7 +47,7 @@ const Navbar = () => {
         { title: 'Digital Marketing', path: '/digital-marketing' },
         { title: 'Creative Design & Content', path: '/creative-design-content' },
         { title: 'Celebrity Endorsement', path: '/celebrity-endorsement' },
-        { title: 'Celebrity Enrollment', path: '/celebrity-enrollment' },
+        { title: 'Outdoor Advertising', path: '/outdoor-advertising' },
         { title: 'AI Videos', path: '/ai-videos' },
       ]
     },
